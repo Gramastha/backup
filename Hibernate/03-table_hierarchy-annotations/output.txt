@@ -1,0 +1,35 @@
+select
+        contact0_.CONTACTID as CONTACTID0_0_,
+        contact0_.FIRSTNAME as FIRSTNAME0_0_,
+        contact0_.LASTNAME as LASTNAME0_0_,
+        contact0_.EMAIL as EMAIL0_0_,
+        contact0_.DATEOFBIRTH as DATEOFBI6_0_0_,
+        contact0_.CITY as CITY0_0_,
+        contact0_.COUNTRY as COUNTRY0_0_,
+        contact0_.desig as desig0_0_,
+        contact0_.empcode as empcode0_0_,
+        contact0_.relation as relation0_0_,
+        contact0_.petname as petname0_0_,
+        contact0_.Contact_type as Contact2_0_0_ 
+    from
+        tbl_contacts contact0_ 
+    where
+        contact0_.CONTACTID=?
+
+----------------------------------------------------------------
+
+
+select
+        friend0_.CONTACTID as CONTACTID0_0_,
+        friend0_.FIRSTNAME as FIRSTNAME0_0_,
+        friend0_.LASTNAME as LASTNAME0_0_,
+        friend0_.EMAIL as EMAIL0_0_,
+        friend0_.DATEOFBIRTH as DATEOFBI6_0_0_,
+        friend0_.CITY as CITY0_0_,
+        friend0_.COUNTRY as COUNTRY0_0_,
+        friend0_.petname as petname0_0_ 
+    from
+        tbl_contacts friend0_ 
+    where
+        friend0_.CONTACTID=? 
+        and friend0_.Contact_type='frn'

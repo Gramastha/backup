@@ -1,0 +1,15 @@
+package com.psl.bean;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext cntxt= new ClassPathXmlApplicationContext("beans.xml");
+		
+		User u1= (User) cntxt.getBean("user");
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+AbstractTextEditor.Color.Background=190,207,254
+AbstractTextEditor.Color.Background.SystemDefault=false
+AbstractTextEditor.Color.Foreground=8,8,8
+AbstractTextEditor.Color.Foreground.SystemDefault=false
+AbstractTextEditor.Color.SelectionForeground=8,8,8
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+CONFLICTING_COLOR=190,207,254
+INCOMING_COLOR=65,48,1
+OUTGOING_COLOR=65,48,1
+RESOLVED_COLOR=115,255,101
+additionIndicationColor=115,255,101
+changeIndicationColor=115,255,101
+com.aptana.editor.common.characterPairColor=95,103,127
+currentLineColor=171,194,245
+deletionIndicationColor=190,207,254
+eclipse.preferences.version=1

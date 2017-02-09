@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;JavaScript-Assignment&apos;" description="Move 1 resources to &apos;JavaScript-Assignment&apos;" destination="/JavaScript-Assignment" element1="/ObjectOrientedProgramming/images" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1483698228913" updateReferences="true"/>
+</session>

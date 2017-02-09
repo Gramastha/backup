@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		var vid = null;
+		var si = null;
+		window.onload =  function(){
+			
+			if(document.addEventListener){
+				vid = document.querySelector("video");
+			
+				var playBtn = document.querySelectorAll("button")[0];
+				var pauseBtn = document.querySelectorAll("button")[1];
+				var stopBtn = document.querySelectorAll("button")[2];
+				var backBtn = document.querySelectorAll("button")[3];
+				var nextBtn = document.querySelectorAll("button")[4];
+				
+				playBtn.addEventListener("click", playHandler);
+				pauseBtn.addEventListener("click", pauseHandler);
+				stopBtn.addEventListener("click", stopHandler);
+				backBtn.addEventListener("click", backHandler);
+				nextBtn.addEventListener("click", nextHandler);
+			}else{
+				document.getElementById("controls").setAttribute("style","display:none")
+			}
+		};		
+		function playHandler(){
+			vid.play();
+			si = setInterval(function(){
+				document.querySelector("output").innerHTML = vid.currentTime;
+			},100);
+		}
+		function pauseHandler(){
+			vid.pause();
+		}
+		function backHandler(){
+			//console.log(vid.currentTime);
+			vid.currentTime-0.5;
+			console.log(vid.currentTime);
+		}
+		function nextHandler(){
+			//console.log(vid.currentTime);
+			vid.currentTime+0.5;
+			console.log(vid.currentTime);
+		}
+		function stopHandler(){
+			vid.currentTime = 0;
+			vid.pause();
+			clearInterval(si);
+			document.querySelector("output").innerHTML = "0"
+		}
+	</script>
+</head>
+<body>
+	<video poster="images/rajani.jpg" loop>
+		<h1>Are you still using IE8</h1>
+		<source src="videos/html5.webm" ></source>
+		<source src="videos/html5.mp4" ></source>
+		<source src="videos/html5.ogv" ></source>
+		
+		<object type="application/x-shockwave-flash" width="320" height="240" >
+			<param name="movie" value="videos/html5.swf" />
+		</object>
+		<track src="util/video.vtt" />
+		<track default src="util/video2.vtt" />
+	</video>
+	<hr/>
+	<h1>
+		<output></output>
+	</h1>
+	<div id="controls">
+		<button>Play</button>
+		<button>Pause</button>
+		<button>Stop</button>
+		<button>Step Back</button>
+		<button>Step Forward</button>
+	</div>
+</body>
+</html>

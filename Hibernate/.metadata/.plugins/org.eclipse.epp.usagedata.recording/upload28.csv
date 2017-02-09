@@ -1,0 +1,14 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.jst.j2ee.ejb.annotations.xdoclet,1.2.0.v200805140020,"org.eclipse.jst.j2ee.ejb.annotations.xdoclet",1485782404837
+stopped,bundle,org.eclipse.jst.server.generic.jboss,1.6.1.v200904151730,"org.eclipse.jst.server.generic.jboss",1485782404859
+stopped,bundle,org.eclipse.jst.server.generic.jonas,1.5.205.v200805140145,"org.eclipse.jst.server.generic.jonas",1485782404898
+stopped,bundle,org.eclipse.jst.server.generic.oc4j,1.5.205.v200805140145,"org.eclipse.jst.server.generic.oc4j",1485782404921
+stopped,bundle,org.eclipse.jst.server.websphere.core,1.0.302.v20080620,"org.eclipse.jst.server.websphere.core",1485782404932
+stopped,bundle,org.eclipse.jst.server.generic.ui,1.0.405.v200905022002,"org.eclipse.jst.server.generic.ui",1485782404952
+stopped,bundle,org.eclipse.jst.server.generic.core,1.0.505.v20090529,"org.eclipse.jst.server.generic.core",1485782404992
+stopped,bundle,org.eclipse.mylyn.ide.ant,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.ide.ant",1485782405016
+stopped,bundle,org.eclipse.datatools.connectivity.oda.template.ui,3.2.0.v200906020553,"org.eclipse.datatools.connectivity.oda.template.ui",1485782405055
+stopped,bundle,org.eclipse.pde.api.tools.ui,1.0.100.v20090526,"org.eclipse.pde.api.tools.ui",1485782405055
+stopped,bundle,org.eclipse.pde.ds.ui,1.0.0.v20090527,"org.eclipse.pde.ds.ui",1485782405177
+stopped,bundle,org.eclipse.pde.runtime,3.4.100.v20090527,"org.eclipse.pde.runtime",1485782405259
+stopped,bundle,org.eclipse.pde.ua.ui,1.0.0.v20090511,"org.eclipse.pde.ua.ui",1485782405335

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    var num= 5;
+    var str="5";
+    if(num==str)
+    console.log("equal");
+    else
+    console.log("not equal")
+    var arr=["abcd","efgh","jklm"];
+    str= arr.join(" ");
+    console.log(str);
+    console.log(str.replace("abc","xyz"));
+    console.log(arr.toString());
+
+var x=[
+    {nm: "xyzw", pow:7},
+    {nm: "pqwr", pow:8},
+    {nm: "abcd", pow:1},
+    {nm: "xyzwww", pow:0},
+    {nm: "deqwdfeuh", pow:10}
+
+]
+function sorting(ar1,ar2){
+    if(ar1.pow>ar2.pow){ return 1;}
+   else if(ar1.pow<ar2.pow){ return -1;}
+   else{return 0}
+}
+ window.onload= function init(){
+     document.getElementById("rev").addEventListener("click",myreverse1)
+    console.log(x.sort(sorting));
+ };
+ function myreverse1(){
+var inputvalue= document.getElementById("name").value;
+console.log(typeof inputvalue);
+arr=inputvalue.split("");
+console.log(typeof arr);
+arr.reverse();
+var a=arr;
+a=a.splice(1,5,"xxxxx");
+document.getElementById("name").value=arr.join("");
+document.getElementById("slice").value= arr.join("");
+document.getElementById("splice").value= arr.join("");
+
+console.log(arr.join(""));
+ }
+    </script>
+</head>
+<body>
+   <input id="name" type="text"/>
+   <button id="rev">Click</button>
+
+
+   <input id="splice" type="text">-Splice</input>
+   slice:<input id="slice" type="text"/>
+
+</body>
+</html>

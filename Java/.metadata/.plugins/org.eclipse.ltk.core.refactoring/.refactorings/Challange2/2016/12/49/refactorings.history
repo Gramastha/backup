@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Contact.java&apos; to &apos;Exception-Handling--IO/src/com.psl.exception&apos;&#x0D;&#x0A;- Original project: &apos;Challange2&apos;&#x0D;&#x0A;- Destination element: &apos;Exception-Handling--IO/src/com.psl.exception&apos;&#x0D;&#x0A;- Original element: &apos;com.psl.cont.Contact.java&apos;" description="Copy compilation unit" destination="=Exception-Handling--IO/src&lt;com.psl.exception" element1="/src&lt;com.psl.cont{Contact.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1480597209689" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>New Input Tags</title>
+	<script >
+		function changeHandlr(eve, display){
+			console.log(eve.value, document.getElementById(display).value)
+			
+			document.getElementById(display).value= eve.value;
+			console.log(eve.value, document.getElementById(display).value)
+		};
+	</script>
+</head>
+<body>
+	<table border="0" cellspacing="5" cellpadding="5" style="background-color: '#0f0fff'">
+		<tr>
+			<th>Tag Name</th>
+			<th>As it appears in the browser</th>
+			</tr>
+		<tr>
+			<td>Text</td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td>Color</td>
+			<td><input type="color" onchange="changeHandlr(this,'col-display')"/>
+				<span id="col-display"> #ffffff</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Search</td>
+			<td><input type="search" /></td>
+		</tr>
+		<tr>
+			<td>Range</td>
+			<td><input min="0" step="6" max="30" type="range" onchange="changeHandlr(this,'rng-display')"/>
+				<output id="rng-display"></output>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>Time</td>
+			<td><input type="time" /></td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td><input type="date" /></td>
+		</tr>
+		<tr>
+			<td>DateTime</td>
+			<td><input type="datetime" /></td>
+		</tr>
+		<tr>
+			<td>Week</td>
+			<td><input type="week" /></td>
+		</tr>
+		<tr>
+			<td>Month</td>
+			<td><input type="month" /></td>
+		</tr>
+		<tr>
+			<td>Number</td>
+			<td><input type="number" /></td>
+		</tr>
+		<tr>
+			<td>date time Local</td>
+			<td><input type="datetime-local" /></td>
+		</tr>
+		<tr>
+			<td>eMAIL</td>
+			<td><input type="email" /></td>
+		</tr>
+		<tr>
+			<td>URL</td>
+			<td><input type="url" /></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" /></td>
+		</tr>
+		<tr>
+			<td>Telephone</td>
+			<td><input type="tel" /></td>
+		</tr>
+	</table>
+</body>
+</html>

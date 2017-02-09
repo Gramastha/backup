@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.psl.util.SharedCommonResource&apos; to &apos;AccessCommonResource&apos;&#x0D;&#x0A;- Original project: &apos;08-Threads&apos;&#x0D;&#x0A;- Original element: &apos;com.psl.util.SharedCommonResource&apos;&#x0D;&#x0A;- Renamed element: &apos;com.psl.util.AccessCommonResource&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SharedCommonResource&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.psl.util{SharedCommonResource.java[SharedCommonResource" matchStrategy="1" name="AccessCommonResource" qualified="false" references="true" similarDeclarations="true" stamp="1480938775494" textual="false" version="1.0"/>
+</session>

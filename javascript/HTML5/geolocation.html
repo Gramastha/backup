@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Geolocation</title>
+	<style>
+  #map {
+    height: 100%;
+  }
+  h1{
+  	color: white;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+</style>
+	<script>
+	/*
+		if(navigator.geolocation){
+			alert("we can track you");
+		}else{
+			alert("are you still using ie8");
+		}
+	 */
+	window.onload = function(){
+		
+		if(navigator.geolocation){
+			navigator
+			.geolocation
+			.getCurrentPosition(successFun, failFun)
+		}else{
+			alert("are you still using ie8");
+		};
+		function successFun(position){
+			var lat=position.coords.latitude;
+			var lan=position.coords.longitude;
+			document.querySelector("#lat").textContent = lat;
+			document.querySelector("#lon").textContent = lan;
+			
+			document.querySelector("#map").src="https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lan+"&zoom=15&size=300x300"
+		}
+		function failFun(){
+			
+		};
+		
+	}
+	</script>
+</head>
+<body>
+	<h1>
+		Latitude : <span id="lat">0</span>
+		<br/>
+		Longitude : <span id="lon">0</span>
+	</h1>
+	<hr />
+	<img id="map" />
+</body>
+</html>

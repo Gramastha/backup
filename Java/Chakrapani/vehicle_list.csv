@@ -1,0 +1,7 @@
+Nickname,Type,Chassis Number,Year of Manufacture,Color,EngineType,Engine Strokes,Number of Cylinders,Engine ID,Oilpump Id,Oilpump Capacity
+Bahadur,Truck,CH1234,1989,Green,_,_,_,E01234,P01234,4
+LoveBug,Car,CH4321,2004,Red,Petrol,_,six,E12345,P54213,4
+Aquila,Motorcycle,CH9876,2003,Blue,_,_,two,E98764,_,_
+Elizabeth,Car,EZ001,1970,BLUE,Diesel,_,_,E00001,P00001,4
+Pinky,Scooter,CH4891,1999,Black,_,two,_,E08761,_,_
+Devidson,Motorcycle,DE9999,1990,REd,Petrol,_,six,D99999,_,_

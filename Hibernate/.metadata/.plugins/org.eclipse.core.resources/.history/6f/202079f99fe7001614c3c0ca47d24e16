@@ -1,0 +1,19 @@
+package snippet;
+
+public class Snippet {
+	select
+	        friend0_.CONTACTID as CONTACTID0_0_,
+	        friend0_.FIRSTNAME as FIRSTNAME0_0_,
+	        friend0_.LASTNAME as LASTNAME0_0_,
+	        friend0_.EMAIL as EMAIL0_0_,
+	        friend0_.DATEOFBIRTH as DATEOFBI6_0_0_,
+	        friend0_.CITY as CITY0_0_,
+	        friend0_.COUNTRY as COUNTRY0_0_,
+	        friend0_.petname as petname0_0_ 
+	    from
+	        tbl_contacts friend0_ 
+	    where
+	        friend0_.CONTACTID=? 
+	        and friend0_.Contact_type='frn'
+}
+

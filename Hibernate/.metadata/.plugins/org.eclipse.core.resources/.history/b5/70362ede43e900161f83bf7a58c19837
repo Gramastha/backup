@@ -1,0 +1,132 @@
+package com.psl.main;
+
+
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.psl.bean.Account;
+import com.psl.bean.User;
+
+
+
+public class Main {
+
+		public static void main(String[] args) {
+		
+		User u1= new User("Abhishek Gramastha");
+		User u2= new User("Deepak Mishra");
+		User u3= new User("Subham Gupta");
+		User u4= new User("Vipul Behl");
+		User u5= new User("Pankaj Suthar");
+		
+		/*Account a1= new Account(10000);
+		Account a2= new Account(20000);
+		Account a3= new Account(50000);
+		Account a4= new Account(25000);
+		Account a5= new Account(5000);
+		Account a6= new Account(35000);
+		Account a7= new Account(50000);*/
+		
+		u1.addAccount(new Account(10000));
+		u1.addAccount(new Account(50000));
+		u2.addAccount(new Account(35000));
+		u2.addAccount(new Account(20000));
+		u3.addAccount(new Account(50000));
+		u4.addAccount(new Account(25000));
+		u4.addAccount(new Account(5000));
+		
+		
+		Configuration config= new Configuration().configure();
+		SessionFactory sessionFactory= config.buildSessionFactory();
+		Session session= sessionFactory.openSession();
+		Transaction trans= session.beginTransaction();
+		
+		session.save(u1);
+		session.save(u2);
+		session.save(u3);
+		session.save(u4);
+		session.save(u5);
+				
+		trans.commit();
+		
+		//select * from usertable--- sql and in hql:
+		System.out.println("--------------------------------list()----------------------");
+		Query query= session.createQuery("from User");
+		List<User> users= query.list();
+		for(User u: users){
+			System.out.println(u.getFullname());
+		}
+		System.out.println("--------------------------------restriction/alias/namedParameter----------------------");
+//		query= session.createQuery("from Account a where a.balance > 30000");
+		query= session.createQuery("from Account a where a.balance > :amt");
+		query.setDouble("amt", 30000);
+		List<Account> acc_list= query.list();
+		for(Account u: acc_list){
+			System.out.println(u.getBalance());
+		}
+		System.out.println("--------------------------------NAmed Query/Externalized query ----------------------");
+		query=  session.getNamedQuery("findBalanceLessThan");
+		query.setDouble("value", 30000);
+		acc_list= query.list();
+		for(Account u: acc_list){
+			System.out.println(u.getBalance());
+		}
+		
+		//select user who dont have account
+		query= session.createQuery("from User u where u.accounts is empty ");
+		users= query.list();
+		for(User u: users){
+			System.out.println(u.getFullname());
+		}
+
+		/*System.out.println("--------------------------------Projection ----------------------");
+		query= session.createQuery("select u.fullname, a.balance from User u, Account a where u.userId= a.owner.userId");
+		List<Object[]> obj_arr= query.list();
+		for (Object[] objects : obj_arr) {
+			System.out.println(objects[0]+" ------ "+objects[1]);
+		}*/
+		/*System.out.println("--------------------------------Projection ----------------------");
+		query= session.createQuery("select u.fullname, a.balance from User u left outer join u.accounts a");
+		List<Object[]> obj_arr= query.list();
+		for (Object[] objects : obj_arr) {
+			System.out.println(objects[0]+" ------ "+objects[1]);
+		}*/
+		
+		/*in this since lazy join is there in inner for loop entire queries are re-executed
+		 * 
+		 * query= session.createQuery("from User u left outer join u.accounts");
+		List<Object[]> obj_arr= query.list();
+		for (Object[] objects : obj_arr) {
+			System.out.println(objects[0]+" ------ "+objects[1]);
+			User u= (User) objects[0];
+			for (Account a: u.getAccounts()) {
+				System.out.println(a.getBalance());
+			}
+		}*/
+		System.out.println("----------Dynamic eager fetch----------");
+		query= session.createQuery("from User u left outer join fetch u.accounts");
+		List<User> obj_arr= query.list();
+		for (User objects : obj_arr) {
+			System.out.println(objects[0]+" ------ "+objects[1]);
+			User u= (User) objects[0];
+			for (Account a: u.getAccounts()) {
+				System.out.println(a.getBalance());
+			}
+		}
+		
+		
+		
+		
+		
+		session.close();
+		sessionFactory.close();
+		
+	}
+
+}

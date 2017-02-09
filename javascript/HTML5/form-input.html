@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New Web Project</title>
+        <script>
+        	function changeHandler(elm, display){
+        		// document.getElementById(display).innerHTML = elm.value;
+        		document.getElementById(display).value = elm.value;
+        	}
+        </script>
+    </head>
+    <body>
+    	<table border="0" cellspacing="5" cellpadding="5">
+			<tr>
+				<th>Tag Name</th>
+				<th>As it Appears in the browser</th>
+			</tr>
+			<tr>
+				<td>Text</td>
+				<td>
+					<input placeholder="your name here" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<td>Color</td>
+				<td>
+					<input onchange="changeHandler(this,'col-display')" type="color" />
+					<span id="col-display"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Search</td>
+				<td>
+					<input autofocus type="search" />
+				</td>
+			</tr>
+			<tr>
+				<td>Range</td>
+				<td>
+					<input min="0" step="5" max="50" onchange="changeHandler(this,'rng-display')" type="range" />
+					<output id="rng-display"></output>
+				</td>
+			</tr>
+			<tr>
+				<td>Time</td>
+				<td>
+					<input type="time" />
+				</td>
+			</tr>
+			<tr>
+				<td>Date</td>
+				<td>
+					<input min="2017-01-03" step="7" max="2017-01-25"  type="date" />
+				</td>
+			</tr>
+			<tr>
+				<td>Date Time</td>
+				<td>
+					<input type="date-time" />
+				</td>
+			</tr>
+			<tr>
+				<td>Week</td>
+				<td>
+					<input type="week" />
+				</td>
+			</tr>
+			<tr>
+				<td>Month</td>
+				<td>
+					<input type="month" />
+				</td>
+			</tr>
+			<tr>
+				<td>Number</td>
+				<td>
+					<input type="number" />
+				</td>
+			</tr>
+			<tr>
+				<td>Date Time Local</td>
+				<td>
+					<input type="datetime-local" />
+				</td>
+			</tr>
+			<tr>
+				<td>eMail</td>
+				<td>
+					<input type="email" />
+				</td>
+			</tr>
+			<tr>
+				<td>Telephont</td>
+				<td>
+					<input type="tel" />
+				</td>
+			</tr>
+			<tr>
+				<td>URL</td>
+				<td>
+					<input type="url" />
+				</td>
+			</tr>
+			<tr>
+				<td>Progress</td>
+				<td>
+					<input type="range" step="0.01" min="0" max="1" onchange="changeHandler(this,'prog')" />
+					<progress id="prog"></progress>
+				</td>
+			</tr>
+			<tr>
+				<td>Meter</td>
+				<td>
+					<meter low="0.4" optimum="0.9" value="0.3" high="0.8" ></meter>
+				</td>
+			</tr>
+		</table>
+		
+    </body>
+</html>

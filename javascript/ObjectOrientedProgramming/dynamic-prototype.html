@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Dynamic Prototype</title>
+        <style>
+        	.box{
+        		height : 100px;
+        		border: 2px solid grey;
+        		overflow: auto;
+        	}
+        	.box div{
+        width: 50px;
+        height: 50px;
+         background-color: lightgreen;
+        margin: 5px;
+        float: left;
+        text-align: center;
+        line-height: 30px;
+        vertical-align: 50px;
+    }
+        </style>
+        <script>
+        	Function.prototype.addFun = function(funame, fun) {
+			  this.prototype[funame]= fun;
+			};
+			var Boxer= function(){};
+			Boxer.addFun("add", function(ele, target){
+				ele.addEventListener("click", function(){
+					document.querySelector(target).innerHTML +="<div></div>";
+				});
+			});
+			Boxer.addFun("remove", function(ele, target){
+				ele.addEventListener("click", function(){
+					var t=document.querySelector(target);
+					var c= t.firstChild;
+					if(c){
+						t.removeChild(c);
+					}
+					else{
+						alert("Insert to remove");
+					}
+				});
+			});
+			
+			var b= new Boxer();
+			window.addEventListener("load", function(){
+				b.add(document.getElementById("adder"), ".box");
+				b.remove(document.getElementById("remover"), ".box");
+			});
+        </script>
+    </head>
+    <body>
+    	<button id="adder">Add button</button>
+    	<button id="remover">Remove Button</button>
+        <div class="box">
+        	
+        	       	
+        </div>
+    </body>
+</html>

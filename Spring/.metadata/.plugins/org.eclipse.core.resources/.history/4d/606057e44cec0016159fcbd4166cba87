@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.psl.bean.Employee" id="emp" lazy-init="true" init-method="abc" destroy-method="pqr" autowire="byName">
+
+<!-- Constructor injection -->
+<property name="name" value="Parth"/>
+<property name="age" value="23"/>
+
+</bean>
+
+<bean class="com.psl.bean.Address" id="addr">
+<!-- Setter injection -->
+<constructor-arg name="city" value="Nagpur"/>
+<constructor-arg name="street" value="Ring Road"/>
+<constructor-arg name="zip" value="440022"/>
+</bean>
+
+
+<bean class="com.psl.bean.Address2" id="addr1" parent="addr">
+<!-- Setter injection -->
+<property name="landmark" value="MAC-D"/>
+</bean>
+</beans>

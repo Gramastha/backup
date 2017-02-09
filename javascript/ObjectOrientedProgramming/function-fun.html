@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Functions</title>
+	<script>
+		var Hero= function(fn,ln){
+			this.fname= fn;
+			this.lastname= ln
+		};
+		Hero.prototype.fullname= function(){
+			return this.fname+" "+this.lastname;
+		};
+		Hero.prototype.getCity= function(city){
+			return this.fname+" "+this.lastname+" is from "+city;
+		};
+			
+		
+		var h1= new Hero("Bruce", "wayne");
+		var h2= new Hero("Peter", "parker");
+		var h3= new Hero("Tony", "Stark");
+		var h4= new Hero("Clark", "kent");
+		/*
+		 
+		console.log(h1.fullname());
+		console.log(h1.getCity("Gondia"));
+		console.log(h2.fullname());
+		console.log(h3.fullname());
+		console.log(h4.fullname());
+		console.log(h1.fullname === h2.fullname);
+		*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

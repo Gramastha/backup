@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Unable to load the repository http://download.eclipse.org/tools/mylyn/update/e3.4/",1485768030195
+started,bundle,org.eclipse.equinox.p2.artifact.repository,1.0.100.v20090527-1812,"org.eclipse.equinox.p2.artifact.repository",1485768070752
+started,bundle,org.eclipse.equinox.p2.touchpoint.eclipse,1.0.100.v20090611-1224,"org.eclipse.equinox.p2.touchpoint.eclipse",1485768070873
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485768081960
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1485768084492
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485768086298
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485768091050
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485768096605
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485768204215
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.newWizard",1485768204236
+started,bundle,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui",1485768224144
+started,bundle,org.eclipse.wst.sse.ui,1.1.100.v200905141750,"org.eclipse.wst.sse.ui",1485768224236
+started,bundle,org.hibernate.eclipse.mapper,3.3.1.v201006011046R-H111-GA,"org.hibernate.eclipse.mapper",1485768224578
+started,bundle,org.eclipse.wst.common.uriresolver,1.1.301.v200805140415,"org.eclipse.wst.common.uriresolver",1485768224608
+started,bundle,org.eclipse.jst.jsp.ui,1.1.400.v200904292008,"org.eclipse.jst.jsp.ui",1485768224851
+started,bundle,org.eclipse.wst.xsl.core,1.0.0.v200905071815,"org.eclipse.wst.xsl.core",1485768224859
+started,bundle,org.eclipse.jst.jsp.core,1.2.202.v200905081451,"org.eclipse.jst.jsp.core",1485768224981
+started,bundle,org.eclipse.wst.dtd.ui,1.0.400.v200904300717,"org.eclipse.wst.dtd.ui",1485768225081
+opened,editor,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1485768225192
+activated,editor,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1485768225368
+started,bundle,org.eclipse.wst.dtd.core,1.1.300.v200904181727,"org.eclipse.wst.dtd.core",1485768225448
+started,bundle,org.eclipse.wst.internet.cache,1.0.301.v200805140020,"org.eclipse.wst.internet.cache",1485768225573
+started,bundle,org.eclipse.jem.workbench,2.0.200.v200810300900,"org.eclipse.jem.workbench",1485768226168
+started,bundle,org.eclipse.wst.jsdt.web.core,1.0.200.v200905120445,"org.eclipse.wst.jsdt.web.core",1485768226303
+started,bundle,org.eclipse.wst.wsdl.validation,1.1.401.v200902271605,"org.eclipse.wst.wsdl.validation",1485768226488

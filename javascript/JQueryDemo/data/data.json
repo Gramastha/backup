@@ -1,0 +1,44 @@
+{
+    "heroes": [
+      {
+        "firstname": "Bruce",
+        "lastname": "Wayne",
+        "title": "Batman",
+        "photo": "images/Shaktimaan.jpg",
+        "power": "7",
+        "city": "Gotham"
+      },
+      {
+        "firstname": "Peter",
+        "lastname": "Parker",
+        "title": "Spiderman",
+        "photo": "images/nagraj.jpg",
+        "power": "6",
+        "city": "New York"
+      },
+      {
+        "firstname": "Clark",
+        "lastname": "Kent",
+        "title": "Superman",
+        "photo": "images/krishna.jpg",
+        "power": "8",
+        "city": "Metropolis"
+      },
+      {
+        "firstname": "Tony",
+        "lastname": "Stark",
+        "title": "Ironman",
+        "photo": "images/doga.jpg",
+        "power": "7",
+        "city": "New York"
+      },
+      {
+        "firstname": "Kit",
+        "lastname": "Walker",
+        "title": "Phantom",
+        "photo": "images/devi.jpg",
+        "power": "7",
+        "city": "Bhangala"
+      }
+    ]
+}

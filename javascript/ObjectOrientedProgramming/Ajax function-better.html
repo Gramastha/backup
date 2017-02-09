@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Ajax Function- Restructured</title>
+	<style>
+		.box{
+			width: 800px;
+			height: 260px;
+			background-color: #333333;
+			color: white;
+			font-family: arial;
+			text-align: justify;
+			padding: 5px;
+			overflow: auto;
+			margin: auto;
+		}
+		button{
+			width: 450px;
+			margin: 10px auto;
+			display: block;
+			padding: 5px;			
+		}
+		.product{
+			width: 150px;
+			height: 200px;
+			background-color: gray;
+			float: left;
+			margin: 5px;
+			
+		}
+		.product h1,h4,h3{
+			margin: 0px;
+			background-color: silver;
+			color: #333333;
+			font-family: arial;
+			text-align: center;
+		}
+		.product h1{
+			font-size: 20px;
+		}
+		.product img{
+			width: 100%;
+			height: 160px;
+		}
+		.product input{
+			width: 96%;
+			margin: 0px;
+		}
+	</style>
+	<script>
+		var xhr = new XMLHttpRequest();// for using ajax
+			// xhr.onreadystatechange;
+			xhr.addEventListener("readystatechange", changeHandler)
+		window.onload = function(){
+			document
+			.querySelector("button")
+			.addEventListener("click", clickHandler);
+		};
+		function clickHandler(){
+			//xhr.open("get","data/data.txt", true);
+			xhr.open("get","data/data.xml", true);
+			//console.log(xhr.readyState);
+			xhr.send();
+		
+		}
+		function changeHandler(){
+			if(xhr.readyState==4 && xhr.status== 200){
+			//console.log(xhr.readyState);
+			var data = xhr.responseXML;
+			var value = data.getElementsByTagName("hero");
+			console.log(value);
+			// document.getElementsByClassName("box")[0].innerHTML += value[0].firstChild.nodeValue;
+			//var cb = document.getElementById("cb");
+			var box= document.getElementsByClassName("box")[0];
+			for(var i = 0; i < value.length; i++ ){
+				var title= data.getElementsByTagName("title")[i].textContent;
+				var fn= data.getElementsByTagName("firstNAme")[i].textContent;
+				var ln= data.getElementsByTagName("Lastname")[i].textContent;
+				var power= data.getElementsByTagName("power")[i].textContent;
+				var photo= data.getElementsByTagName("photo")[i].textContent;
+				var city= data.getElementsByTagName("city")[i].textContent;
+				var t= document.getElementById("t").innerHTML;
+				t= t.replace("{title}","title").replace("{photo}","photo").replace("{city}","city").replace("{fn}","fn").replace("{ln}","ln").replace("{power}","power");
+					//cb.innerHTML+="<option>"+value[i].textContent+"</option>"
+					box.innerHTML+=t;
+				}
+		}
+		}
+	</script>
+</head>
+<body>
+	<button>Get Data</button>
+	<div class="box"> </div>
+	<template id="t">
+		<div class='product'><h1>{title}</h1><img  src='{photo}' /><input type='range' value='{power}' min='0' max='10' /><h4> <span>{fn}</span> <span>{ln}</span></h4><h3> {city} </h3></div>
+	</template>
+</body>
+</html>

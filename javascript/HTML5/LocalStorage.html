@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Storage</title>
+<style>
+		label{
+			width: 100px;
+			display: inline-block;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			document
+			.querySelector("#addBtn")
+			.addEventListener("click", function(){
+				window.localStorage.name = document.querySelector("#un").value;
+				window.localStorage.age = document.querySelector("#ua").value;
+				window.localStorage.email = document.querySelector("#ue").value;
+				//-----------------------------------------------
+				document.querySelector("#un").value 
+				= document.querySelector("#ua").value 
+				= document.querySelector("#ue").value = "";
+				//-----------------------------------------------;
+				// console.log(window.localStorage.name);
+			});
+			
+			document.getElementById("gn").addEventListener("click", getNameFun)
+			document.getElementById("ga").addEventListener("click", getAgeFun)
+			document.getElementById("ge").addEventListener("click", geteMailFun)
+		};
+		
+		function getNameFun(){
+			alert(window.localStorage.name);
+		}
+		function getAgeFun(){
+			alert(window.localStorage.age);
+		}
+		function geteMailFun(){
+			alert(window.localStorage.email);
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+	  <legend>Update user Info</legend>
+	  <div>
+	  	<label for="un">User Name</label>
+	  	<input id="un" />
+	  </div>
+	  <div>
+	  	<label for="ua">User Age </label>
+	  	<input id="ua" />
+	  </div>
+	  <div>
+	  	<label for="ue">User eMail</label>
+	  	<input id="ue" />
+	  </div>
+	  <div>
+	  	<label></label>
+	  	<button id="addBtn">Add Info</button>
+	  </div>
+	</fieldset>
+	<hr/>
+	<button id="gn">Get Name</button>
+	<button id="ga">Get Age</button>
+	<button id="ge">Get EMail</button>
+</body>
+
+</html>

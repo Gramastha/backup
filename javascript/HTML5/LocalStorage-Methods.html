@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>LocalStorage-Methods</title>
+	<style>
+		label{
+			width: 100px;
+			display: inline-block;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			//====================================================
+			 document.querySelector("#gcount").setAttribute("max",localStorage.length);
+			//====================================================
+			document
+			.querySelector("#addBtn")
+			.addEventListener("click", function(){
+				/*
+				window.localStorage.name = document.querySelector("#un").value;
+				window.localStorage.age = document.querySelector("#ua").value;
+				window.localStorage.email = document.querySelector("#ue").value;
+				 */
+				var count = window.localStorage.length+1;
+				var user = {
+					name : document.querySelector("#un").value,
+					age : document.querySelector("#ua").value,
+					email : document.querySelector("#ue").value
+				};
+				// window.localStorage["user"+count] = JSON.stringify(user);
+				localStorage.setItem("user"+count , JSON.stringify(user));
+				document.querySelector("#gcount").setAttribute("max",localStorage.length);
+				//-----------------------------------------------
+				document.querySelector("#un").value 
+				= document.querySelector("#ua").value 
+				= document.querySelector("#ue").value = "";
+				//-----------------------------------------------;
+				// console.log(window.localStorage.name);
+			});
+			
+			document.getElementById("gn").addEventListener("click", getNameFun)
+			document.getElementById("ga").addEventListener("click", getAgeFun)
+			document.getElementById("ge").addEventListener("click", geteMailFun)
+			document.getElementById("gtu").addEventListener("click", getUsersFun)
+			document.getElementById("rlh").addEventListener("click", removeLastHero)
+			document.getElementById("gk").addEventListener("click", getKeyName)
+			document.getElementById("selrem").addEventListener("click", removeHEro)
+		};
+		
+		function getNameFun(){
+			//alert(window.localStorage.name);
+			var user = JSON.parse(localStorage.getItem("user"+localStorage.length));
+			alert(user.name)
+		}
+		function getAgeFun(){
+			var user = JSON.parse(localStorage.getItem("user"+localStorage.length));
+			alert(user.age)
+		}
+		function geteMailFun(){
+			var user = JSON.parse(localStorage.getItem("user"+localStorage.length));
+			alert(user.email)
+		}
+		function getUsersFun(){
+			alert(localStorage.length)
+		}
+		function removeLastHero(){
+			localStorage.removeItem("user"+localStorage.length);
+		}
+		function removeHEro(){
+			localStorage.removeItem("user"+document.querySelector("#gcount").value-1);
+		}
+		function getKeyName(){
+			alert(localStorage.key(document.querySelector("#gcount").value-1));
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+	  <legend>Update user Info</legend>
+	  <div>
+	  	<label for="un">User Name</label>
+	  	<input id="un" />
+	  </div>
+	  <div>
+	  	<label for="ua">User Age </label>
+	  	<input id="ua" />
+	  </div>
+	  <div>
+	  	<label for="ue">User eMail</label>
+	  	<input id="ue" />
+	  </div>
+	  <div>
+	  	<label></label>
+	  	<button id="addBtn">Add Info</button>
+	  </div>
+	</fieldset>
+	<hr/>
+	<input type="number" id="gcount" min="1" />
+	<button id="gtu">Get Total Users</button>
+	<button id="gn">Get Name</button>
+	<button id="ga">Get Age</button>
+	<button id="ge">Get EMail</button>
+	<button id="rlh">Remove Last Hero</button>
+	<button id="selrem">Remove Selected Hero</button>
+	<button id="gk">Get Key Name</button>
+</body>
+</html>

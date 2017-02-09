@@ -1,0 +1,4 @@
+Write a program that creates an instance of the Storage class
+Now set up a Counter and Printer object to operate on it.
+Identify that, whether synchronization is required or not in this assignment.
+ If yes, implement it.

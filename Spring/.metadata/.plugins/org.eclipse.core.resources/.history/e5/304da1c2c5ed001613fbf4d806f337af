@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>SpringMvcdemo</display-name>
+  <!-- <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list> -->
+  
+ <!-- The front controller of this Spring Web application, responsible for handling all application requests -->
+	<servlet>
+		<servlet-name>employee</servlet-name><!-- it will look for employee-servlet.xml -->
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- <init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>location</param-value>
+		</init-param> -->
+		<!-- <load-on-startup>1</load-on-startup> -->
+	</servlet>
+
+	<!-- Map all requests to the DispatcherServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>employee</servlet-name>
+		<url-pattern>/</url-pattern>
+		<!-- we use / so that it directly map to dispatcher servlet -->
+	</servlet-mapping>
+</web-app>

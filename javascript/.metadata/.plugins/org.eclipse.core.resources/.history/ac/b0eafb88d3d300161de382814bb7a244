@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Question 3</title>
+	<script type="text/javascript">
+var library = [ 
+   {
+       author: 'Bill Gates',
+       title: 'The Road Ahead',
+       readingStatus: true
+   },
+   {
+       author: 'Walter Isaacson ',
+       title: 'Steve Jobs',
+       readingStatus: true
+   },
+   {
+       author: 'Randy Pauch',
+       title:  'The Last Lecture', 
+       readingStatus: false
+   }];
+
+</script>
+</head>
+<body>
+	<div class="show">
+		
+	</div>
+</body>
+</html>

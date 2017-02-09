@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Closure</title>
+	
+	<script>
+		var displayMessage= function(count){
+			return function(msg){
+				var content="";
+				for(var i=0;i<count;i++){
+					content += "</br>"+msg+"<br>"+i+"<br/>"
+				}
+				return content;
+			}
+		};
+		var d= displayMessage(5);// here after the return from function the count value gets closed due to its use by inner function
+		window.onload= function(){
+			document.body.innerHTML += d("Go to hell");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

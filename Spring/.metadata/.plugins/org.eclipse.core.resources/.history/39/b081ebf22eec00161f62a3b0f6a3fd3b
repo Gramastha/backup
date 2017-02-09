@@ -1,0 +1,48 @@
+package com.psl.bean;
+
+public class Employee {
+
+	private String name;
+	private int age;
+	private Address address;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(String name, int age, Address address) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.address = address;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		System.out.println("IN emp >> setName");
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		System.out.println("IN emp >> setAge");
+		this.age = age;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		System.out.println("IN emp >> setAddress");
+		this.address = address;
+	}
+	
+	
+}

@@ -1,0 +1,161 @@
+package com.psl.main;
+
+import java.sql.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.psl.bean.Address;
+import com.psl.bean.Contact;
+import com.psl.bean.Profile;
+import com.psl.bean.Qualification;
+import com.psl.bean.User;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		User u1= new User("User1");
+		User u2= new User("User2");
+		User u3= new User("User3");
+		User u4= new User("User4");
+		User u5= new User("User5");
+				
+		Contact c1= new  Contact("ABCD", "XYZW", "a@a.a", Date.valueOf("2010-10-10"), new Address("MUMBAI", "INDIA"));
+		Contact c2= new  Contact("EFGH", "PQRS", "e@f.g", Date.valueOf("2001-10-01"),new Address("NAgpur", "INDIA"));
+		Contact c3= new  Contact("AbCD@", "PQRS3", "e3@f.g", Date.valueOf("2001-03-03"),new Address("NAgpur3", "INDIA3"));
+		Contact c4= new  Contact("asdsad", "PQRS4", "e@f4.g", Date.valueOf("2001-04-04"),new Address("NAgpur4", "INDIA4"));
+		Contact c5= new  Contact("EdsdFGH", "PQRS5", "e@f.g5", Date.valueOf("2001-05-05"),new Address("NAgpur5", "INDIA5"));
+		Contact c6= new  Contact("qerEFGH", "PQRS6", "e6@f.g", Date.valueOf("2001-06-06"),new Address("NAgpur6", "INDIA6"));
+		Contact c7= new  Contact("grtghEFGH", "PQRS7", "e7@f.g", Date.valueOf("2001-07-07"),new Address("NAgpur7", "INDIA7"));
+		Contact c8= new  Contact("hthszhEFGH", "PQRS8", "e8@f.g", Date.valueOf("2001-08-08"),new Address("NAgpur8", "INDIA8"));
+		Contact c9= new  Contact("thyEFGH", "PQRS9", "e9@f.g", Date.valueOf("2001-09-09"),new Address("NAgpur9", "INDIA9"));
+		Contact c10= new  Contact("trhtEFGH", "PQRS10", "e10@f.g", Date.valueOf("2001-10-10"),new Address("NAgpur10", "INDIA10"));
+		
+		Profile p1= new Profile("School1", "College1");
+		Profile p2= new Profile("School2", "College2");
+		Profile p3= new Profile("School3", "College3");
+		Profile p4= new Profile("School4", "College4");
+		Profile p5= new Profile("School5", "College5");
+		Profile p6= new Profile("School6", "College6");
+		Profile p7= new Profile("School7", "College7");
+		Profile p8= new Profile("School8", "College8");
+		Profile p9= new Profile("School9", "College9");
+		Profile p10= new Profile("School10", "College10");
+		
+		Qualification q1= new Qualification("BE");
+		Qualification q2= new Qualification("BTech");
+		Qualification q3= new Qualification("BA");
+		Qualification q4= new Qualification("BCom");
+		Qualification q5= new Qualification("MBA");
+				
+		
+		u1.addContact(c1);
+		u1.addContact(c2);
+		u1.addContact(c5);
+		
+		u2.addContact(c3);
+		u2.addContact(c4);
+		
+		u3.addContact(c6);
+
+		u4.addContact(c7);
+		u4.addContact(c8);
+		
+		u5.addContact(c9);
+		u5.addContact(c10);
+		///------------------------------
+		c1.addProfile(p1);
+		c2.addProfile(p2);
+		c3.addProfile(p3);
+		c4.addProfile(p4);
+		c5.addProfile(p5);
+		c6.addProfile(p6);
+		c7.addProfile(p7);
+		c8.addProfile(p8);
+		c9.addProfile(p9);
+		c10.addProfile(p10);
+		///------------------------------
+		p1.addQualification(q1);
+		p1.addQualification(q2);
+		
+		p2.addQualification(q1);
+		p2.addQualification(q5);
+		p2.addQualification(q2);
+		
+		p3.addQualification(q3);
+		p3.addQualification(q4);
+		
+		p4.addQualification(q2);
+		p4.addQualification(q3);
+		
+		p5.addQualification(q5);
+		
+		p6.addQualification(q1);
+		
+		p7.addQualification(q5);
+		p7.addQualification(q4);
+		
+		p8.addQualification(q2);
+		
+		p9.addQualification(q4);
+		p9.addQualification(q3);
+		p9.addQualification(q2);
+		
+		p10.addQualification(q3);
+		///------------------------------
+		Configuration config= new Configuration().configure();
+		SessionFactory sessionFactory= config.buildSessionFactory();
+		Session session= sessionFactory.openSession();
+		Transaction trans= session.beginTransaction();
+				
+		session.saveOrUpdate(u1);
+	/*	for(Contact c: u1.getContacts()){
+			session.save(c);
+		}
+		*/
+		session.saveOrUpdate(u2);
+		/*for(Contact c: u2.getContacts()){
+			session.save(c);
+		}*/
+		
+		session.saveOrUpdate(u3);
+		/*for(Contact c: u3.getContacts()){
+			session.save(c);
+		}*/
+		
+		session.saveOrUpdate(u4);
+		/*for(Contact c: u4.getContacts()){
+			session.save(c);
+		}
+		*/
+		session.saveOrUpdate(u5);
+		/*for(Contact c: u5.getContacts()){
+			session.save(c);
+		}*/
+		trans.commit();
+		
+		
+		session.clear();
+		User u= (User) session.get(User.class, new Integer(1));
+		
+	//	System.out.println(u.getContacts());
+//		Contact c= (Contact) session.get(Contact.class, new Integer(2));
+//		
+//		u.getContacts().remove(c);
+//		
+//		trans= session.beginTransaction();
+//		session.saveOrUpdate(u);
+//		trans.commit();
+		
+		session.close();
+		sessionFactory.close();
+		
+	}
+
+}

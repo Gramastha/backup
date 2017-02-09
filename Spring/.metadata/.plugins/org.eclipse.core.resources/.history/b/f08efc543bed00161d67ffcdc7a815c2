@@ -1,0 +1,49 @@
+package com.psl.bean;
+
+public class Ticket {
+
+	private int bearthNo,CoachNo;
+	private long pnr;
+	
+	
+	
+	
+	
+	public Ticket() {
+		super();
+	}
+	public Ticket(int bearthNo, int coachNo, long pnr, String name) {
+		super();
+		this.bearthNo = bearthNo;
+		CoachNo = coachNo;
+		this.pnr = pnr;
+		
+	}
+	public int getBearthNo() {
+		return bearthNo;
+	}
+	public void setBearthNo(int bearthNo) {
+		this.bearthNo = bearthNo;
+	}
+	public int getCoachNo() {
+		return CoachNo;
+	}
+	public void setCoachNo(int coachNo) {
+		CoachNo = coachNo;
+	}
+	public long getPnr() {
+		return pnr;
+	}
+	public void setPnr(long pnr) {
+		this.pnr = pnr;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format(
+				"Ticket [bearthNo=%s, CoachNo=%s, pnr=%s]", bearthNo,
+				CoachNo, pnr);
+	}
+	
+	
+}

@@ -1,0 +1,8 @@
+package com.psl.bean;
+
+public class Qualification {
+
+	private int qualification_id;
+	private String name;
+	
+}

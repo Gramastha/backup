@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Audio DEMO</title>
+<script>
+		var audi = null;
+		var si = null;
+		window.onload =  function(){
+			if(document.addEventListener){
+				audi = document.querySelector("audio");
+				var playBtn = document.querySelectorAll("button")[0];
+				var pauseBtn = document.querySelectorAll("button")[1];
+				var stopBtn = document.querySelectorAll("button")[2];
+				var backBtn = document.querySelectorAll("button")[3];
+				var nextBtn = document.querySelectorAll("button")[4];
+				
+				playBtn.addEventListener("click", playHandler);
+				pauseBtn.addEventListener("click", pauseHandler);
+				stopBtn.addEventListener("click", stopHandler);
+				backBtn.addEventListener("click", backHandler);
+				nextBtn.addEventListener("click", nextHandler);
+			}else{
+				document.getElementById("controls").setAttribute("style","display:none")
+			}
+		};		
+		function playHandler(){
+			audi.play();
+			si = setInterval(function(){
+				document.querySelector("output").innerHTML = audi.currentTime;
+			},100);
+		}
+		function pauseHandler(){
+			audi.pause();
+		}
+		function backHandler(){
+			//console.log(vid.currentTime);
+			audi.currentTime-0.5;
+			console.log(audi.currentTime);
+		}
+		function nextHandler(){
+			//console.log(vid.currentTime);
+			audi.currentTime+0.5;
+			console.log(audi.currentTime);
+		}
+		function stopHandler(){
+			audi.currentTime = 0;
+			audi.pause();
+			clearInterval(si);
+			document.querySelector("output").innerHTML = "0"
+		}
+	</script>
+</head>
+<body>
+	<audio>
+		<h1>Are you still using IE8</h1>
+		<source src="audio/Kalimba.mp3" ></source>
+	</audio>
+	<hr/>
+	<h1>
+		<output></output>
+	</h1>
+	<div id="controls">
+		<button>Play</button>
+		<button>Pause</button>
+		<button>Stop</button>
+		<button>Step Back</button>
+		<button>Step Forward</button>
+	</div>
+</body>
+</html>

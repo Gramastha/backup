@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.psl.bean.Ticket" id="ticket" lazy-init="true" parent="train">
+<property name="bearthNo" value="1"/>
+<property name="coachNo" value="70"/>
+<property name="pnr" value="105421357453"/>
+</bean>
+
+<bean class="com.psl.bean.Train" id="train" scope="prototype">
+<constructor-arg name="name" value="Rajdhani"/>
+</bean>
+
+<bean class="com.psl.bean.User" id="user" autowire="byType">
+<property name="age" value="22"/>
+<property name="name" value="dshddsaf"/>
+</bean>
+<bean class="com.psl.bean.User" id="user1" autowire="constructor">
+<property name="age" value="2"/>
+<property name="name" value="000000000"/>
+</bean>
+
+</beans>

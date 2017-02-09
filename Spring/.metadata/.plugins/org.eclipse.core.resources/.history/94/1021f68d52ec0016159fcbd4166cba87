@@ -1,0 +1,32 @@
+package com.psl.bean;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.web.context.support.XmlWebApplicationContext;
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext cntxt= new ClassPathXmlApplicationContext("configuration.xml");
+	//ApplicationContext cntxt= new FileSystemXmlApplicationContext("configuration.xml");
+	/*	
+	 * used for dynamic web projects
+	 * 
+	 * XmlWebApplicationContext cntxt= new XmlWebApplicationContext();
+		cntxt.setConfigLocation("configuration.xml");
+		cntxt.setServletContext(request.getServletContext());
+		cntxt.refresh();*/
+		
+		Employee emp= (Employee) cntxt.getBean("emp");
+		Address2 add2= (Address2) cntxt.getBean("addr1");
+		
+		cntxt.registerShutdownHook();
+		
+		System.out.println(emp);
+
+	}
+
+}

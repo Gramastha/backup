@@ -1,0 +1,42 @@
+package com.psl.bean;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class User {
+
+	private int user_id;
+	private String username;
+	private Set<Contact> contacts= new HashSet<Contact>();
+	
+	public User() {
+		
+	}
+	
+	public User( String username) {
+		super();
+		
+		this.username = username;
+	}
+	public int getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(int userId) {
+		user_id = userId;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public Set<Contact> getContacts() {
+		return contacts;
+	}
+	public void setContacts(Set<Contact> contacts) {
+		this.contacts = contacts;
+	}
+	
+	
+}
+

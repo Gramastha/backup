@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Question 3</title>
+	<script type="text/javascript">
+
+  var myDate = new Date();
+
+  var days= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  alert("Today is "+days[myDate.getDay()]);
+  var time= myDate.getHours()>=12 ? 'PM' : 'AM'; 
+  alert("Current time is : "+(24-myDate.getHours())+" "+time+" : "+myDate.getMinutes()+" : "+myDate.getSeconds());
+</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			document.getElementById("storeBtn").addEventListener("click", storeInfo);
+			document.getElementById("getBtn").addEventListener("click", getInfo);
+		}
+		function storeInfo(){
+			window.localStorage.userInfo = document.getElementById("ti1").value;
+		};
+		function getInfo(){
+			alert(window.localStorage.userInfo);
+		};
+	</script>
+</head>
+<body>
+	<h1>Storage Update App</h1>
+	<label>User Name</label>
+	<input type="text" id="ti1" /><br>
+	
+	<button id="storeBtn">Store Info</button>
+	<button id="getBtn">Get Info</button>
+</body>
+</html>

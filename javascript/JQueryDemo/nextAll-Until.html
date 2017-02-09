@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Filters next - prev -etc</title>
+<style>
+		[id^="box"]{
+			width : 300px;
+			height : 100px;
+			background-color: yellow;
+			margin: 10px;
+			border: 1px solid transparent;
+		}
+		[id^="box"] div, div{
+			height : 20px;
+			background-color: orange;
+			margin: 10px;
+		}
+	</style>
+	<script src="lib/jquery-3.1.1.js"></script>
+	<script>
+	
+	$(function(){
+			///=========================
+			// $(".x:first").next().next().next().prev().css("border","4px double maroon")
+			// $(".x:first").nextAll().css("border","4px double maroon")
+			// $(".x:first").nextUntil(".z").css("border","4px double maroon")
+			
+			// $(".z").prevUntil(".x").css("border","4px double maroon")
+			
+			
+			 $(".x:eq(1)")
+			 .next()
+			 .text("look mom i have changed")
+			 .css("border","4px double maroon")
+			 .prev()
+			 .prev()
+			 .css("border","2px solid red")
+			 .end()
+			 .text("look dad i have changed");
+			 
+			///=========================
+		})
+	
+		$(function(){
+			///=========================
+				$("#box1").append("text message");
+				$("#box2").prepend("<div/>");
+				 $("#box3").append("<div/>");
+// 				
+				// $("#box4").before("<div/>");
+				 // $("#box5").after("<div/>");
+				
+				 // $("#box1").appendTo("#box5");
+				// $("#box1").prependTo("#box5");
+// 				
+				 // $("#box1").insertAfter("#box5")
+				// $("#box2").insertBefore("#box5")
+			///=========================
+		})
+	</script>
+</head>
+<body>
+<div id="box1">content 1</div>
+<div id="box2">content 2</div>
+<div id="box3">content 3</div>
+<div id="box4">content 4</div>
+<div id="box5">content 5</div>
+</body>
+</html>

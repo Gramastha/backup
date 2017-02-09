@@ -1,0 +1,9 @@
+
+1. Write a method to one-time initialize a account manager
+	and its bank 
+2. Write a test method to test accountManager.addAccount() 
+	method
+3. Write a test method to test the accountManager.isValidAccount() 
+	method
+4. Write a test method to test the accountManager.getBank()
+	method

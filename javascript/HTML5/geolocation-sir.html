@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Geolocation</title>
+	<script>
+	/*
+		if(navigator.geolocation){
+			alert("we can track you");
+		}else{
+			alert("are you still using ie8");
+		}
+	 */
+	var pos = null;
+	window.onload = function(){
+		if(navigator.geolocation){
+			navigator
+			.geolocation
+			.getCurrentPosition(successFun, failFun)
+		}else{
+			alert("are you still using ie8");
+		};
+		document.querySelector("#zoomin")
+		.addEventListener("change", zoomHandler);
+		
+		function successFun(position){
+			pos = position;
+			zoomHandler();
+		}
+		function failFun(){
+			
+		};
+		function zoomHandler(){
+			var zoom = document.querySelector("#zoomin").value;
+			console.log(zoom)
+			var lat = pos.coords.latitude
+			var lon = pos.coords.longitude
+			document.querySelector("#lat").textContent = lat;
+			document.querySelector("#lon").textContent = lon;
+			//-----------------------------------------------
+			document.querySelector("#map").src = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom="+zoom+"&maptype=hybrid&markers=color:orange|label:V|"+lat+","+lon+"&size=500x500"
+		
+		};
+	}
+	</script>
+</head>
+<body>
+	<h1>
+		https://developers.google.com/maps/documentation/static-maps/intro
+		<hr/>
+		Latitude : <span id="lat">0</span>
+		<br/>
+		Longitude : <span id="lon">0</span>
+	</h1>
+	<!--img src="https://maps.googleapis.com/maps/api/staticmap?center=Nagpur,Maharashtra&zoom=14&size=500x500" /-->
+	<input value="10" id="zoomin" style="width: 500px" type="range" min="10" max="20" step="1" />
+	<hr/>
+	<img id="map"/>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+		<li>List Item 4</li>
+		<li>List Item 5</li>
+	</ul>
+	<input id="num" />
+	<h1> Count Now is : <span id="display"></span></h1>
+	<button id="startBtn">Create Worker</button>
+	<button id="stopBtn">Stop Working</button>
+	<script>
+			var worker1 = null;
+		
+			document
+			.querySelector("#num")
+			.addEventListener("change", function(evt){
+				worker1.postMessage(evt.target.value);
+			});
+			document
+			.querySelector("#startBtn")
+			.addEventListener("click", function(){
+				worker1 = new Worker("worker/worker1.js")
+				worker1.addEventListener("message", messageHandler);
+			});
+			document
+			.querySelector("#stopBtn")
+			.addEventListener("click", function(){
+				worker1.terminate();
+			});
+			
+			// worker1.onmessage = messageHandler;
+			
+			function messageHandler(evt){
+				document.querySelector("#display").innerHTML = evt.data
+			};
+	</script>
+</body>
+</html>

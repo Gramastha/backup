@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Plugins in JQUERY</title>
+<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			color: white;
+			text-height: 25px;
+			text-align : center;
+			line-height: 100px;
+			vertical-align: middle;
+			background-color: orange;
+		}
+	</style>
+	<link href="jq/jquery-ui.css" rel="stylesheet" />
+	<link href="jq/jquery-ui.theme.css" rel="stylesheet" />
+	<script src="lib/jquery-3.1.1.js"></script>
+	<script src="jq/jquery-ui.js"></script>
+	<script>
+		$(function(){
+			// $(".box").dialog();
+			/*
+			$(".heroes").accordion({
+					      collapsible: true
+					    });
+			 */
+			$(".box").draggable({
+				snap : true,
+				grid : [100, 100]
+			});
+		});
+	</script>
+</head>
+<body>
+	<!--div class="box">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque alias enim ratione adipisci aspernatur unde praesentium provident consequuntur autem eos doloremque eius voluptate veniam neque obcaecati doloribus distinctio quisquam ipsum?
+	</div-->
+	<!--div class="heroes">
+			<h1 class="herotitle">
+				Batman
+			</h1>
+			<div class="herodetail">
+				<h2>Batman Data</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+			</div>
+			<h1 class="herotitle">
+				Superman
+			</h1>
+			<div class="herodetail">
+				<h2>Superman Data</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+			</div>
+			<h1 class="herotitle">
+				Spiderman
+			</h1>
+			<div class="herodetail">
+				<h2>Spiderman Data</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+			</div>
+			<h1 class="herotitle">
+				Ironman
+			</h1>
+			<div class="herodetail">
+				<h2>Ironman Data</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+			</div>
+			<h1 class="herotitle">
+				SuperGirl
+			</h1>
+			<div class="herodetail">
+				<h2>SuperGirl Data</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate blanditiis obcaecati accusamus quibusdam nihil quas repudiandae ea rerum delectus iusto praesentium corporis veniam facere quo ipsam dolorum et molestias. In.
+			</div>
+	</div-->
+	<div class="box">A</div>
+	<div class="box">I</div>
+	<div class="box">B</div>
+	<div class="box">S</div>
+	<div class="box">E</div>
+	<div class="box">M</div>
+	<div class="box">O</div>
+	<div class="box">H</div>
+	<div class="box">K</div>
+	<div class="box">H</div>
+</html>

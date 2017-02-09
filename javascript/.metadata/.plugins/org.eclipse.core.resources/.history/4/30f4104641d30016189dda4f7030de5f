@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q1</title>
+	<script >
+	window.onload= function(){
+		var c= parseInt(prompt("Enter The Temperature value in Celsius: "));
+		var f= c*9/5 +32;
+			alert(c+" C is equal to "+f+" F")
+	}
+		function calcf(){
+			var c= document.querySelector("#c").value;
+			var f= c*9/5 +32;
+			alert(c+" C is equal to "+f+" F")
+		}
+		
+		function calc(){
+			var f= document.querySelector("#f").value;
+			var c= f*5/9 -32;
+			alert(f+" F is equal to "+c+" C")
+		}
+	</script>
+</head>
+<body>
+	<!--Enter The Temperature value in Celsius:
+	<input type="text" id="c" onchange="calcf()"/>
+	<hr />
+	Enter The Temperature value in Fahrenheit:
+	<input type="text" id="f" onchange="calc()"/> -->
+</body>
+</html>

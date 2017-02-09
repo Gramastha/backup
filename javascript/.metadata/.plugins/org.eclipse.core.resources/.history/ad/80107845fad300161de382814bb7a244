@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q10</title>
+	<script type="text/javascript" charset="utf-8">
+		window.onload= function(){
+			
+			document.getElementById("outer").addEventListener("click", outerClickHandler,true);
+			document.getElementById("outer").addEventListener("click", outerClickHandler,false);
+			document.getElementById("inner").addEventListener("click", clickHandler,true);
+			document.getElementById("inner").addEventListener("click", clickHandler,false);
+			document.getElementById("clickimg").addEventListener("click", clickHandler);// default false
+			
+		};
+		function clickHandler(eve){
+			console.log(eve.currentTarget.id);
+			//alert(eve.target.innerHTML);
+		}
+		function outerClickHandler(eve){
+			if(document.getElementById("cb").checked){
+				eve.stopPropagation();
+				console.log("event was stopped by "+eve.currentTarget.id);
+			}
+			else{
+							console.log(eve.currentTarget.id);			
+			}
+		}
+	</script>
+</head>
+<body>
+	<div style="padding:30px; background-color: black" id="outer">
+	<Button id="inner" style="background-color: orange">
+		<img src='SomeImage.jpg' style="width: 100px; height: 100px;" id="clickimg"></img>
+	</Button>
+</div>
+
+</body>
+</html>

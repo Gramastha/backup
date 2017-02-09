@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functions</title>
+    <script>
+    function fun(msg){
+        console.log(msg);
+        console.log(fun.arguments.length);
+        console.log(fun.caller.name);
+        console.log(fun.arguments.callee);
+    };
+    function fun11(){
+    fun({title: "Abhishek", id: 1234});
+    }
+     fun11(); 
+     var name="hanuman";
+     var first={
+         name : "Shaktiman",
+         sayname: function(msg){
+             console.log(msg+" "+this.name);
+         }
+        }
+          var second={
+         name : "Ram"
+        
+        }
+        first.sayname.call(window,"hello");
+        first.sayname.apply(first, ["hello"]);
+        first.sayname.bind(second)("hello");
+
+        var newFun= first.sayname.bind(this);
+        newFun("hello");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Qunit test</title>
+	<link href="qunit/qunit-2.0.1.css"  rel="stylesheet"/>
+	
+	<script src="qunit/qunit-2.0.1.js"></script>
+	<script>
+		function fun(){
+			return "Batman";
+		}
+	</script>
+	<script>
+		QUnit.test("Unit Testing Basics", function(assert){
+			var testit= fun();
+			//assert.equal(testit,"Batman","should return batman");
+			//assert.ok(testit=='Batman', "All is well");
+			assert.equal(fun().length,6,"testing fun().length=6");
+			assert.expect(1);//how many assertions are expected in this case 1
+		});
+	</script>
+		
+
+</head>
+<body>
+	<div id="qunit">
+		
+	</div>
+	
+</body>
+</html>

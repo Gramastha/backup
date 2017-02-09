@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1485769396686
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1485769400576
+closed,editor,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1485769400576
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1485769456117
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485769459294
+started,bundle,org.eclipse.datatools.connectivity,1.1.2.v200906020553,"org.eclipse.datatools.connectivity",1485769463361
+started,bundle,org.eclipse.datatools.connectivity.ui,1.1.4.v200906020553,"org.eclipse.datatools.connectivity.ui",1485769463438
+no handler,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1485769670504
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.copy",1485769967838
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1485769969358
+opened,editor,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1485770005881
+activated,editor,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1485770005928
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1485770005978
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.newWizard",1485770006018
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.copyLineDown",1485770197670
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1485770206658
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770214748
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215409
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215449
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215489
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215528
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215568
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215607
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215649
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1485770215687

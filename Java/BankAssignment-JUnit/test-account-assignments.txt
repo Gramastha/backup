@@ -1,0 +1,9 @@
+
+1. Write a method to one-time initialize a account object 
+2. Write a test method to test the account.deposit() method
+3. Write a test method to test the exception thrown from
+	 account.deposit() method
+4. Write a test method to test the account.withdraw() method
+5. Write a test method to test the exception thrown from 
+	 account.withdraw() method
+6. Write a test method to test the account.getBalance() method

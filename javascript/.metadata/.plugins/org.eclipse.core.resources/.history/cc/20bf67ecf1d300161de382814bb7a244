@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q9</title>
+	<script>
+		var a=[{		id: 111,		name: "Sachin",		runs: 99		},
+			{		id: 222,		name: "Rahul",		runs: 98		},
+		{		id: 333,		name: "Saurav",		runs: 89		},
+		{		id: 444,		name: "Mahindra",		runs: 94		},
+		{		id: 555,		name: "Virat",		runs: 93		},
+		{		id: 666,		name: "Yuvraj",		runs: 95		}];
+ // a.forEach(function(v,i,arr){ console.log("object-"+i) for(o in v){ console.log(o+" : "+v[o]) } });
+ 
+ 
+ function fun(min){
+ 	var str= "";
+ 	a.forEach(function(v,i,arr){
+ 		str+= "<tr>";
+ 	if(v["runs"]>=min){
+ 	for(o in v){
+ 		str+="<td>"+v[o]+"</td>";
+ 	 	}
+ 	 	str+="</tr>"
+ 	 }
+ });
+ document.querySelector("#t1").innerHTML="<tr><th><b>PlayerId</b></th><th><b>PlayerName</b></th><th><b>Runs</b></th></tr>"
+ 											+str;
+ };
+ 
+ 
+ window.onload= function(){
+ 	var str= "";
+ 	a.forEach(function(v,i,arr){
+ 		str+= "<tr>";
+ 	
+ 	for(o in v){
+ 		str+="<td>"+v[o]+"</td>";
+ 	 	}
+ 	 	str+="</tr>";
+ });
+ 	document.querySelector("#t1").innerHTML="<tr><th><b>PlayerId</b></th><th><b>PlayerName</b></th><th><b>Runs</b></th></tr>"
+ 											+str;
+ 											
+ };
+ 
+	</script>
+</head>
+<body>
+	<table border="1" id="t1">
+		
+	</table>
+	<input type="text" id="tbox" onfocusout=""/>
+</body>
+</html>

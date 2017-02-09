@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Question 5</title>
+	<script type="text/javascript">
+	var a1 = [ 
+	1,2,3,1,2,4,5,3,6
+	  ];
+var dup=[];
+	a1.forEach(function(value,index,array){
+		var f= true;
+        for(p in dup){
+        	if(!p==value){
+        		
+        		f=false;
+        	}
+        }
+        if(f){
+        	dup.push(value);
+        }
+        
+            });
+            console.log(a1);
+            console.log(dup);
+       
+</script>
+</head>
+<body>
+	<div class="show">
+		
+	</div>
+</body>
+</html>

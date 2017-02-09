@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Mutation</title>
+    
+    <script>
+    /*
+   var o={
+       f: "Jai",
+       l:"Hanuman"
+   };
+   var hero= Object.create(o);
+   console.log(hero.f+" "+hero.l);
+   hero.f="hello"
+   console.log(hero.f+" "+hero.l);
+   console.log(o.f+" "+o.l);
+   o.l="maruti"
+    console.log(hero.f+" "+hero.l);
+   console.log(o.f+" "+o.l);
+    */
+    var obj= Object.create(null);
+    Object.defineProperty(obj,"f",{
+        value : "hanuman",
+        writable : false, //whether you  change value of property or not
+        enumerable :true, // whether your property is available in loop or not
+        configurable: false // whether you redefine the property or not
+    });
+
+  /*  Object.defineProperty(obj,"f",{
+         value : "Maruti",
+        writable : false, //whether you  change value of property or not
+        enumerable :true, // whether your property is available in loop or not
+        configurable: false // whether you redefine the property or not
+    });
+*/
+ Object.defineProperty(obj,"power",{
+        value : 7,
+        writable : true, //whether you  change value of property or not
+        enumerable :true
+        //for getters and setters do not write enumerable and configurable
+    });
+   Object.defineProperty(obj,"Accesspower",{
+       get: function(){
+           return this.power;
+       },
+       set: function(value){
+           this.power= value;
+       }
+    });
+/*
+or we can define all properties as follows:
+Object.defineProperties(obj,{
+power : { value : 7,  writable : true,},
+f : { value : "hanuman",writable : false, enumerable :true, nfigurable: false},
+Accesspower : { 
+        get: function(){    return this.power;   },
+       set: function(value){   this.power= value;       }
+        }
+});
+
+
+
+*/
+for(p in obj){
+    console.log(p);
+}
+
+
+    console.log(obj.power);//7
+    console.log(obj.Accesspower);//7
+    obj.Accesspower= 10;
+    console.log(obj.Accesspower);//10
+
+
+    
+    
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>

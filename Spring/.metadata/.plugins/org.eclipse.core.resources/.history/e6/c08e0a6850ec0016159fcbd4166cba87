@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+
+<context:annotation-config/>
+<context:component-scan base-package="com.psl.bean"/>
+<bean class="com.psl.bean.Employee" id="emp" lazy-init="true" init-method="abc" destroy-method="pqr" autowire="byType">
+
+<!-- Constructor injection -->
+<constructor-arg name="name" value="Parth"/>
+<constructor-arg name="age" value="23"/>
+
+</bean>
+
+
+<!-- <bean class="com.psl.bean.Address" id="a" name="address1">
+<!-- Setter injection -->
+<property name="city" value="Nagpur1"/>
+<property name="street" value="Ring Road1"/>
+<property name="zip" value="440022"/>
+</bean> -->
+<bean class="com.psl.bean.Address" id="addr" name="address">
+<!-- Setter injection -->
+<property name="city" value="Nagpur"/>
+<property name="street" value="Ring Road"/>
+<property name="zip" value="440022"/>
+</bean>
+
+<bean class="com.psl.bean.Address2" id="addr1" parent="addr" name="a2">
+<!-- Setter injection -->
+<property name="landmark" value="MAC-D"/>
+</bean>
+</beans>

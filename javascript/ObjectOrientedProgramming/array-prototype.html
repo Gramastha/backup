@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		Array.prototype.toCurrency= function(symbol){
+			var vals="";
+			for(var i=0;i<this.length;i++){
+				vals+=symbol+" "+this[i]+"\n";
+			};
+			return vals;
+		};
+	
+		 
+			var arr=[100,200,300,600,5000];
+			var arr1=[100,200,300,600,5000];
+			console.log(arr.toCurrency("Rs. "));
+			console.log(arr.toCurrency("$ "));			
+			arr1.toCurrency= function(){
+				var vals="";
+			for(var i=0;i<this.length;i++){
+				vals+=arguments[0]+" "+this[i]+".00\n";
+			};
+			return vals;
+			}
+			console.log(arr1.toCurrency("Rs. "));
+			console.log(arr1.toCurrency("$ "));	
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

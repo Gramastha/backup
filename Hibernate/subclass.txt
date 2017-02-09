@@ -1,0 +1,50 @@
+    select
+        contact0_.CONTACTID as CONTACTID0_0_,
+        contact0_.FIRSTNAME as FIRSTNAME0_0_,
+        contact0_.LASTNAME as LASTNAME0_0_,
+        contact0_.EMAIL as EMAIL0_0_,
+        contact0_.DATEOFBIRTH as DATEOFBI5_0_0_,
+        contact0_.CITY as CITY0_0_,
+        contact0_.COUNTRY as COUNTRY0_0_,
+        contact0_1_.desig as desig1_0_,
+        contact0_1_.empcode as empcode1_0_,
+        contact0_2_.relation as relation2_0_,
+        contact0_3_.petname as petname3_0_,
+        case 
+            when contact0_1_.Emp_contact_id is not null then 1 
+            when contact0_2_.REL_contact_id is not null then 2 
+            when contact0_3_.FRN_contact_id is not null then 3 
+            when contact0_.CONTACTID is not null then 0 
+        end as clazz_0_ 
+    from
+        tbl_contacts contact0_ 
+    left outer join
+        tbl_employees contact0_1_ 
+            on contact0_.CONTACTID=contact0_1_.Emp_contact_id 
+    left outer join
+        tbl_relative contact0_2_ 
+            on contact0_.CONTACTID=contact0_2_.REL_contact_id 
+    left outer join
+        tbl_friend contact0_3_ 
+            on contact0_.CONTACTID=contact0_3_.FRN_contact_id 
+    where
+        contact0_.CONTACTID=?
+-------------------------------------------------------------------------------------------
+
+
+ select
+        friend0_.FRN_contact_id as CONTACTID0_0_,
+        friend0_1_.FIRSTNAME as FIRSTNAME0_0_,
+        friend0_1_.LASTNAME as LASTNAME0_0_,
+        friend0_1_.EMAIL as EMAIL0_0_,
+        friend0_1_.DATEOFBIRTH as DATEOFBI5_0_0_,
+        friend0_1_.CITY as CITY0_0_,
+        friend0_1_.COUNTRY as COUNTRY0_0_,
+        friend0_.petname as petname3_0_ 
+    from
+        tbl_friend friend0_ 
+    inner join
+        tbl_contacts friend0_1_ 
+            on friend0_.FRN_contact_id=friend0_1_.CONTACTID 
+    where
+        friend0_.FRN_contact_id=?

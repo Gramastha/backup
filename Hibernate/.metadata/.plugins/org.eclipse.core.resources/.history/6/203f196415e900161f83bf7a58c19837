@@ -1,0 +1,41 @@
+package com.psl.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.psl.bean.User;
+
+
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		User u1= new User("Abhishek Gramastha");
+		User u2= new User("Deepak Mishra");
+		User u3= new User("Subham Gupta");
+		User u4= new User("Vipul Behl");
+		User u5= new User("Pankaj Suthar");
+		
+		Configuration config= new Configuration().configure();
+		SessionFactory sessionFactory= config.buildSessionFactory();
+		Session session= sessionFactory.openSession();
+		Transaction trans= session.beginTransaction();
+		
+		
+		
+		
+		trans.commit();
+		
+		
+		session.close();
+		sessionFactory.close();
+		
+	}
+
+}

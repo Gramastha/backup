@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 1</title>
+    
+    <script>
+   window.name="Window"
+   var obj={
+       name: "Object",
+
+       firstFun : function(){
+         //  this.name="parent";
+           var nested= function(){
+             //  this.name="nested"
+               console.log(this.name);
+           }
+           nested();
+               console.log(this.name);
+           
+       }
+       
+   }
+             obj.firstFun();
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>

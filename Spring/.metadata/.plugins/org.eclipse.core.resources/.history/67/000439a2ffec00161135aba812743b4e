@@ -1,0 +1,38 @@
+package com.psl.service;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.psl.bean.Employee;
+import com.psl.dao.IEmployeeDAO;
+
+public class EmployeeService {
+	
+		private IEmployeeDAO dao;
+		private JdbcTemplate template;
+		
+		public void addEmployee(Employee e){
+			
+		}	
+		
+		public List<Employee> getALLEmployees(){
+			return null;
+		}
+
+		public IEmployeeDAO getDao() {
+			return dao;
+		}
+
+		public void setDao(IEmployeeDAO dao) {
+			this.dao = dao;
+		}
+
+		public JdbcTemplate getTemplate() {
+			return template;
+		}
+
+		public void setTemplate(JdbcTemplate template) {
+			this.template = template;
+		}
+}

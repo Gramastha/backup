@@ -1,0 +1,26 @@
+package com.psl.bean;
+
+import java.sql.Date;
+
+public class Relation extends Contact {
+ private String relation;
+
+public Relation(String firstname, String lastname, String email,
+		Date dateOfBirth, Address addrs, String relation) {
+	super(firstname, lastname, email, dateOfBirth, addrs);
+	this.relation = relation;
+}
+
+public Relation() {
+	super();
+}
+
+public String getRelation() {
+	return relation;
+}
+
+public void setRelation(String relation) {
+	this.relation = relation;
+}
+ 
+}

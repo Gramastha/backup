@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;qunit-test/testfile&apos; to &apos;testfile.html&apos;" description="Rename resource &apos;testfile&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="testfile" name="testfile.html" stamp="1483175661266" updateReferences="true"/>
+</session>

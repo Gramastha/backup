@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q1</title>
+	<script >
+		function calc(){
+			var c= document.querySelector("#temp").value;
+			var f= c*9/5 +32;
+			alert(c+" C is equal to "+f+" F")
+		}
+	</script>
+</head>
+<body>
+	Enter The Temperature value in Celsius:
+	<input type="text" id="temp" onchange="calc()"/>
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+1. Write a method to test the FileUtil.readAccountData() 
+	method 
+2. Write a test method to test whether the FileUtil.readAccountData()
+	method has correctly read all records. 
+	Hint: Look a particular Account record.
+
+You can try multiple permutations with the 
+test methods by changing data in the accounts.txt
+file. For example:
+1. What if data in file is not in correct format
+2. What if data in file is illegal

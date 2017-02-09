@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 1</title>
+    
+    <script>
+   var cart={
+       sellingPrice: function(){
+           return 100;
+       },
+       totalPrice: function(){
+         var self=this;
+          var tax= function(){
+            //  return self.sellingPrice()*0.1;
+              return this.sellingPrice()*0.2;
+            
+        }
+        return this.sellingPrice()+ tax.bind(this)();
+           // return this.sellingPrice()+tax();
+
+        //    var tax= function(abc){
+        //        return abc.sellingPrice()*0.1;
+        //    }
+        //     return this.sellingPrice()+tax.bind()(this);
+        //    return this.sellingPrice()+tax.apply(this, [this]);
+        //    return sellingPrice+tax.call(this,this);
+           
+       }
+   }
+
+   for(p in cart){
+       console.log(p, cart[p].call(cart))
+   }
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+		<li>List Item 4</li>
+		<li>List Item 5</li>
+	</ul>
+	<h1> Count Now is : <span id="display"></span></h1>
+	<script>
+		for(var i = 0 ; i < 1000000; i++){
+			console.log(i)
+			document.querySelector("#display").innerHTML = i
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+  
+    <script>
+   var o1= new Object();
+   var o2= new Object({
+       title: "Hanuman",
+       "first Name": "maruti",
+       "p name": "Anjani -- Kesri",
+       power: 10
+   });
+   var o3={};
+   var o4= Object.create(null);
+
+var a="p";
+var b="name";
+console.log(o2.title);
+console.log(o2["first Name"]);
+console.log(o2[a+" "+b]);
+for(p in o2){
+    console.log(p," : ",o2[p]);
+};
+
+
+
+ </script>
+</head>
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>

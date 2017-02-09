@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Guest List</title>
+<script>
+function addItem(){
+	var guest = document.getElementById("guestName").value;
+	var count = document.getElementById("guestCount").value;
+	window.localStorage.setItem(guest,count);
+}
+function countItem(){
+	var display = document.getElementById("display");
+	display.textContent = "Number of Guests are : " +window.localStorage.length;
+}
+function removeItem(){
+	var guest = document.getElementById("guestName").value;
+	window.localStorage.removeItem(guest);
+}
+function clearAllItems(){
+	window.localStorage.clear();
+}
+function displayAllGuest(){
+	var count = window.localStorage.length;
+	var result = "Hotel Reservation :<br/><ul>";
+		for (var i = 0; i < count; i++) {
+			var key = window.localStorage.key(i);
+			var val = window.localStorage.getItem(key);
+			result += "<li>" + key + " ~ " + val + "</li>";
+		}
+	result += "</ul>";
+	document.getElementById("display").innerHTML = result;
+}
+function init(){
+	document.getElementById("addButton").addEventListener("click", addItem)
+	document.getElementById("countGuest").addEventListener("click", countItem)
+	document.getElementById("removeGuest").addEventListener("click", removeItem)
+	document.getElementById("clearGuest").addEventListener("click", clearAllItems)
+	document.getElementById("displayGuest").addEventListener("click", displayAllGuest)
+}
+</script>
+</head>
+<body onload="init()">
+<h1> Hotel Guest List </h1>
+<fieldset>
+	<legend>Hotel Reservation </legend>
+	<table>
+		<tr>
+			<td>
+				<label> Guest Name : </label>
+			</td>
+			<td>
+				<input type="text" id="guestName" /> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label> No of Guests : </label>
+			</td>
+			<td>
+				<input type="text" id="guestCount" /> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				<input type="submit" value="Add Guest" id="addButton" /> 
+			</td>
+		</tr>
+	</table>
+</fieldset>
+<input type="button" id="countGuest" value="Guest Count" />
+<input type="button" id="removeGuest" value="Remove Guest" />
+<input type="button" id="clearGuest" value="Clear Guest" />
+<input type="button" id="displayGuest" value="Guest List" />
+<fieldset>
+	<legend> Guest List </legend>
+	<p id="display"> Guest List : </p>
+</fieldset>
+</body>
+</html>

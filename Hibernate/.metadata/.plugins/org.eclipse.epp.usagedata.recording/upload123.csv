@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+ws,sysinfo,,,"win32",1486009836051
+locale,sysinfo,,,"en_US",1486009836051
+processors,sysinfo,,,"1",1486009836051
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1486009836051
+java.runtime.version,sysinfo,,,"1.6.0_24-b07",1486009836051
+java.specification.name,sysinfo,,,"Java Platform API Specification",1486009836051
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1486009836051
+java.specification.version,sysinfo,,,"1.6",1486009836051
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1486009836051
+java.version,sysinfo,,,"1.6.0_24",1486009836051
+java.vm.info,sysinfo,,,"mixed mode, sharing",1486009836051
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1486009836051
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1486009836051
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1486009836051
+java.vm.specification.version,sysinfo,,,"1.0",1486009836051
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1486009836051
+java.vm.version,sysinfo,,,"19.1-b02",1486009836051
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.0.v200906080500,"org.eclipse.jst.common.project.facet.core",1486009836504
+opened,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1486010340008
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1486010340133
+activated,view,org.eclipse.ui.views,3.4.0.I20090525-2000,"org.eclipse.ui.views.ContentOutline",1486010341646
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1486010341646
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1486010341677
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1486010345782
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1486010450629

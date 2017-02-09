@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <style>
+    .box div{
+        width: 50px;
+        height: 50px;
+         background-color: lightsalmon;
+        margin: 5px;
+        float: left;
+        text-align: center;
+        line-height: 30px;
+        vertical-align: 50px;
+    }
+    </style>
+    <script>
+   
+   var count=1;
+document.addEventListener("DOMContentLoaded", function(){
+var s= setInterval(function(){
+var elementid=document.getElementsByClassName("box")[0];
+// var r= Math.round(Math.random()*255);
+// var g= Math.round(Math.random()*255);
+// var b= Math.round(Math.random()*255);
+
+var arr=["blueviolet","orange","lightsalmon","lightpink", "lightblue", "lightgreen","pink","purple"];
+
+var x= Math.round(Math.random()*100%(arr.length));
+elementid.innerHTML+= "<div style='background-color:"+arr[x+1]+"'>"+(count++)+"</div>";
+
+if(count>100)
+clearInterval(s);
+},100)
+});
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>

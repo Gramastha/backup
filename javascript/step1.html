@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    function callfun(){
+        alert("you clicked in first");
+    }
+       function fumonload(){
+    //   alert("Window on load");
+
+        document.getElementById("firstitem").addEventListener("click",callfun);
+    
+        document.getElementById("lastitem").addEventListener("click",function(){
+                 document.getElementById("firstitem").removeEventListener("click",callfun);
+   
+        });
+         document.getElementById("fourth").addEventListener("click",function(){
+                 document.getElementById("firstitem").addEventListener("click",callfun);
+   
+        });
+    
+           }
+
+   // window.onload= fumonload;
+
+window.addEventListener("load", fumonload);
+
+   /* var msg="Good morning";
+    var Msg="Hello World";
+
+    console.log(msg);
+    console.log(Msg);
+        //alert(msg);
+    /*console.log(msg);
+    console.error(msg);
+    console.warn(msg);*/
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="firstitem">Abcd</li>
+        <li>Efgh</li>
+        <li>Ijkl</li>
+ 
+        <li id="fourth">Mnop</li>
+        <li id="lastitem">Qrst</li>
+    </ul>
+           <script src="script.js"> </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>with-without</title>
+	<script>
+		function without(){
+			var d= new Date();
+			return d.getMilliseconds();
+		};
+		function withc(){
+			var d= new Date();
+			return function(){
+				return d.getMilliseconds();
+		}
+		};
+		document.addEventListener("DOMContentLoaded", function(){
+			var c1=0;
+			var c2=0;
+			var b1=document.getElementById("b1");
+			var b2=document.getElementById("b2");
+			var s1= setInterval(function(){
+				if(c1<5){
+					b1.innerHTML += "<h1>"+without()+"</h1>";
+					c1++;
+				}
+				else{
+					clearInterval(s1);
+				}
+			},100);
+			//========jmsdfghsdfjkfokleokefjeifjkwer========================
+			var w= withc();
+			var s2= setInterval(function(){
+				if(c2<5){
+					b2.innerHTML += "<h1>"+w()+"</h1>";
+					c2++;
+				}
+				else{
+					clearInterval(s2);
+				}
+			},100);
+		});
+		
+		
+	</script>
+</head>
+<body>
+	<div id="b1">
+		
+	</div>
+	<hr />
+	<div id="b2">
+		
+	</div>
+</body>
+</html>

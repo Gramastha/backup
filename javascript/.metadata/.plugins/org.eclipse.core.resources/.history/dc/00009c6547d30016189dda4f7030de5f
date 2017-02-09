@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Question 3</title>
+	<script type="text/javascript">
+window.onload= function(){
+  var myd = new Date();
+
+  
+  
+	var mm= myd.getMonth();
+	var dd=myd.getDay();
+	var yyyy= myd.getYear();
+	
+	document.querySelector(".show").textContent+= mm+"-"+dd+"-"+yyyy+"<br> <br>"+mm+"/"+dd+"/"+yyyy+"<br> <br>+dd+"-"+mm+"-"+yyyy+"<br> <br>"+dd+"/"+mm+"/"+yyyy;
+};
+</script>
+</head>
+<body>
+	<div class="show">
+		
+	</div>
+</body>
+</html>

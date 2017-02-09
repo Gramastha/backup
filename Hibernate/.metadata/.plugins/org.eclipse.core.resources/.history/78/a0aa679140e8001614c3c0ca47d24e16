@@ -1,0 +1,130 @@
+package com.psl.bean;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Contact {
+
+	private int contactId;
+	private String firstname, lastname;
+	private String email;
+	private Date dateOfBirth;
+	/* changing to maltivalueed address private Address addrs;
+	 <component name="addrs">
+     <property name="city" column="CITY"></property>
+     <property name="country" column="COUNTRY"></property>
+    </component>
+    
+    public Address getAddrs() {
+		return addrs;
+	}
+
+	public void setAddrs(Address addrs) {
+		this.addrs = addrs;
+	}
+    *
+    */
+	
+	
+	private List<Address> addresses= new ArrayList<Address>();
+	
+	
+	
+	
+	
+	/*
+	 * ORDERING in hibernate using orderby in db
+	 * private Set<String> mobilenums= new LinkedHashSet<String>();
+		
+	public Set<String> getMobilenums() {
+		return mobilenums;
+	}
+
+	public void setMobilenums(Set<String> mobilenums) {
+		this.mobilenums = mobilenums;
+	}*/
+	
+	/*
+	 * 
+	 * Sorting in hibernate using Comparator in JAVA
+	 * actual object for set is TREESET and TREEMAP for maps
+	 */
+		private TreeSet<String> mobilenums= new TreeSet<String>();
+	
+	public TreeSet<String> getMobilenums() {
+		return mobilenums;
+	}
+
+	public void setMobilenums(TreeSet<String> mobilenums) {
+		this.mobilenums = mobilenums;
+	}
+	/*private List<String> mblnums= new ArrayList<String>();
+	
+
+	public List<String> getMblnums() {
+		return mblnums;
+	}
+
+	public void setMblnums(List<String> mblnums) {
+		this.mblnums = mblnums;
+	}*/
+
+	public Contact() {
+		super();
+	}
+	
+	
+
+	public Contact( String firstname, String lastname,
+			String email, Date dateOfBirth, Address addrs) {
+		super();
+		
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.dateOfBirth = dateOfBirth;
+		this.addrs = addrs;
+	}
+
+	public int getContactId() {
+		return contactId;
+	}
+	public void setContactId(int contactId) {
+		this.contactId = contactId;
+	}
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	@Override
+	public String toString() {
+		return "Contact [dateOfBirth=" + dateOfBirth + ", email=" + email
+		+ ", firstname=" + firstname + ", lastname=" + lastname + "]";
+	}
+	
+}

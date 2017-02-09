@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>DOM model</title>
+	<style>
+		.box{
+        		
+        		        		background : yellow;
+        		        		
+        	}
+	</style>
+	<script type="text/javascript" charset="utf-8">
+		window.onload= function(){
+			//alert(document.getElementsByTagName("body")[0].childNodes.length);
+			//alert(document.getElementsByTagName("body")[0].children.length);
+			// alert(document.body.children[0].children[0].innerHTML);
+			// alert(document.getElementsByTagName("li")[0].innerHTML);
+			// alert(document.querySelector("li").innerHTML);
+			// alert(document.querySelectorAll("li")[0].innerHTML);
+			
+			//styling dom elements
+			document.querySelectorAll("li")[2].style.backgroundColor="orange";
+			document.querySelectorAll("li")[2].style= "border:2px solid blue";
+			document.querySelectorAll("li")[3].style.border = "2px solid red";
+			document.querySelectorAll("li")[1].setAttribute("style", "border:2px solid black");
+			document.querySelectorAll("li")[0].setAttribute("class", "box");
+			var abcd=function(){
+				alert("abcd");
+			};
+			document.querySelectorAll("li")[4].setAttribute("onMouseOver", "abcd()");
+		};
+	</script>
+</head>
+<body>
+	<ul id="list">
+		<li class="item1">List 1</li>
+		<li class="item2">List 2</li>
+		<li class="item3">List 3</li>
+		<li class="item4">List 4</li>
+		<li class="item5">List 5</li>
+	</ul>
+	<p>para 1</p>
+	<p>para 2</p>
+	<p>para 3</p>
+</body>
+</html>

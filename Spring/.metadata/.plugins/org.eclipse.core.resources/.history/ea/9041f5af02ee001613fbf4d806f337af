@@ -1,0 +1,17 @@
+package com.psl.dao;
+
+public class Acc_service  implements ACC_Interface{
+
+	@Override
+	public void withdraw(int amm) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deposit(int amm) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.psl.bean;
+
+public class Transaction {
+	private int debit;
+	private int credit,tid;
+	private Account acc_id;
+	
+
+}

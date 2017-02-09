@@ -1,0 +1,9 @@
+ID,Gender,Cost,Style,Brand,Shape,Display,Quantity
+1,Men,5000,Dress,Armitron,Rectangle,Analog,2
+2,Men,4500,Sport,Fossil,Round,Digital,2
+3,Women,4300,Casual,Timex,Rectangle,Analog,3
+4,Men,5200,Dress,Fossil,Oval,Analog,1
+5,Women,3800,Casual,Armitron,Square,Analog,3
+6,Women,3500,Casual,Fossil,Square,Analog,3
+7,Men,5300,Sport,Armitron,Rectangle,Analog,4
+8,Men,3400,Casual,Casio,Square,Analog,3

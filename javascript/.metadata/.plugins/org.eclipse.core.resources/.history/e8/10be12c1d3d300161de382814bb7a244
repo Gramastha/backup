@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Question 3</title>
+	<script type="text/javascript">
+	var library = [ 
+	   {
+	       author: 'Bill Gates',
+	       title: 'The Road Ahead',
+	       readingStatus: true
+	   },
+	   {
+	       author: 'Walter Isaacson ',
+	       title: 'Steve Jobs',
+	       readingStatus: true
+	   },
+	   {
+	       author: 'Randy Pauch',
+	       title:  'The Last Lecture', 
+	       readingStatus: false
+	   }];
+
+	library.forEach(function(v,i,a){
+		if(v[2]==true){
+			console.log("Already read");
+			console.log(v[0]);
+			console.log(v[1]);
+		}
+		else{
+			console.log("You still need to read");
+			console.log(v[0]);
+			console.log(v[1]);
+		}
+    });
+       
+</script>
+</head>
+<body>
+	<div class="show">
+		
+	</div>
+</body>
+</html>

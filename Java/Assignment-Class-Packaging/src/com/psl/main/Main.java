@@ -1,0 +1,39 @@
+package com.psl.main;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import com.persistent.app.Advisor;
+import com.persistent.app.Greeter;
+
+import esg.itp.shape.Polygon;
+import esg.itp.shape.Rectangle;
+import esg.itp.shape.Square;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		for(int i=0;i<args.length;i++){
+			Greeter g= new Greeter(args[i]);
+			g.sayHello();
+		}
+		Advisor ad= new Advisor();
+		ad.getAdvice();
+		
+		for(int i=args.length-1;i>=0;i--){
+			Greeter g= new Greeter(args[i]);
+			g.sayGoodBye();;
+		}
+		
+		Polygon p= new Square(10);
+		p.display();
+		p= new Rectangle(10, 20);
+		p.display();
+		
+		
+		
+	}
+
+}

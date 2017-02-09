@@ -1,0 +1,5 @@
+package com.psl.dao;
+
+public class Acc_service  implements ACC_Interface{
+
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q7</title>
+	<script>
+	var a1= new Array();
+	var a2= new Array();
+		var s=prompt("Enter 1st array seperated by ','");
+	var w=s.split(",");
+	for(x in w){
+		a1.push(w[x]);
+		
+	}
+	   console.log("1st: "+a1);
+	 s=prompt("Enter 2nd array seperated by ','");
+	w=s.split(",");
+	for(x in w){
+		a2.push(w[x]);
+		
+	}
+	console.log("2nd: "+a2);
+	var dup=new Array();
+	a1.forEach(function(value,index,array){
+		var f= true;
+        for(p in dup){
+        	if(dup[p]==value){
+        		
+        		f=false;
+        	}
+        	
+        }
+        if(f){
+        	
+        	dup.push(value);
+        }
+        
+            });
+	a2.forEach(function(value,index,array){
+		var f= true;
+        for(p in dup){
+        	if(dup[p]==value){
+        		
+        		f=false;
+        	}
+        	
+        }
+        if(f){
+        	
+        	dup.push(value);
+        }
+        
+   });
+           
+         console.log("Array after Merging:-"+dup);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

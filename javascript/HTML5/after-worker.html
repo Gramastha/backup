@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+		<li>List Item 4</li>
+		<li>List Item 5</li>
+	</ul>
+	<h1> Count Now is : <span id="display"></span></h1>
+	<script>
+		var worker1 = new Worker("worker/worker1.js");
+			// worker1.onmessage = messageHandler;
+			worker1.addEventListener("message", messageHandler);
+			
+			function messageHandler(evt){
+				document.querySelector("#display").innerHTML = evt.data
+			};
+	</script>
+</body>
+</html>

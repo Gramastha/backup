@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New Web Project</title>
+        <script>
+        	window.onload= function(){
+        		var ua= document.querySelector("#age");
+        		ua.addEventListener("input", function(){
+        			
+        			if(ua.value< 18){
+        				console.log(ua.value)
+        				ua.setCustomValidity("you are too young");
+        			}
+        			else if(ua.value> 70){
+        				
+        				ua.setCustomValidity("you are too old");
+        			}
+        			else{
+        				
+        				ua.setCustomValidity("");
+        			}
+        		})
+        	}
+        </script>
+    </head>
+    <body>
+    	<form action="#" method="get" >
+		  
+				 
+		
+    	<table border="0" cellspacing="5" cellpadding="5">
+			<tr>
+				<th>User Name</th>
+				<td>
+					<input type="text" name="username" required/>
+				</td>
+			</tr>
+			<tr>
+				<th>User Age </th>
+				<td>
+					<input id="age" type="number" required  name="userage"/>
+				</td>
+			</tr>
+			<tr>
+				<th>User Phone</th>
+				<td>
+					<input type="tel" required name="userphone" pattern="\d{4}-\d{7}" />
+				</td>
+			</tr>
+			<tr>
+				<th>User Email</th>
+				<td>
+					<input type="email" required name="userEmail" />
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td>
+					<button> Login</button>
+				</td>
+			</tr>
+		</table>
+		</form>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+1. Arithmatic operations
+2. Clear screen operation
+3. navigation property
+4. ON-Off facility
+5. limit of response value
+6. simplicity for handling buttons
+7. Bodmas is applied or not
+8. Logarithmic and trignometric operations
+9. what happens when multiple buttons are clicked
+10. is insertion and deletion offered for digits 

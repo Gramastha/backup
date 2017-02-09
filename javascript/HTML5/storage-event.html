@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			document.getElementById("storeBtn")
+			.addEventListener("click", storeInfo);
+			
+			document.getElementById("getBtn")
+			.addEventListener("click", getInfo);
+			
+			addEventListener("storage", storageHandler);
+		}
+		function storeInfo(){
+			localStorage.userInfo = document.getElementById("ti1").value;
+		};
+		function getInfo(){
+			alert(localStorage.userInfo);
+		};
+		function storageHandler(evt){
+			document.getElementById("display").innerHTML += "Old Value : "+evt.oldValue+"<br/> New Value : "+evt.newValue+"<br/> Changed By : "+evt.url;
+			localStorage.userInfo = evt.oldValue;
+			document.getElementById("display").innerHTML += "<br/> But I decided to use the old value instead :)";
+		}
+	</script>
+</head>
+<body>
+	<h1>Storage Event Handler</h1>
+	<label>User Name</label>
+	<input type="text" id="ti1" /><br>
+	
+	<button id="storeBtn">Store Info</button>
+	<button id="getBtn">Get Info</button>
+	<hr/>
+	<h3 id="display"></h3>
+</body>
+</html>

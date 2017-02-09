@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>modules using jquery</title>
+	<script src="lib/jquery-3.1.1.js"></script>
+	<style>
+		#box{
+        		height : 500px;
+        		border: 5px solid grey;
+        		background : black;
+        		overflow: auto;
+        	}
+       #box div{
+        width: 90px;
+        height: 90px;
+         background: lightgreen;
+         border: 2px solid blue;
+        margin: 5px;
+        float: left;
+      
+    }
+     #box p{
+        width: 90px;
+        height: 90px;
+        border: 2px solid red;
+         background: orange;
+        margin: 5px;
+        float: left;
+      }
+     #box li{
+        width: 90px;
+        height: 90px;
+        border: 2px solid green;
+         background: purple;
+        margin: 5px;
+        float: left;
+        
+    }
+	</style>
+	<script>
+		var e=function($){
+			_count= 1;
+			var genUid = function(){
+				return "hello"+_count++;
+			};
+			var create =function(typ,uid){
+				var uid= uid || genUid();
+			/*
+				var add= document.createElement(typ);
+							add.innerHTML= uid;*/
+			var add=$("<"+typ+"/>").html(uid).get(0);
+				return add;
+			};
+			return {
+				create: create
+			}
+		}(jQuery);
+		
+		
+		
+		window.onload=function() {
+			document.getElementById("add").addEventListener("click", function(){
+				var typ= document.getElementById("typeb").value;
+				document.getElementById("box").appendChild(e.create(typ));
+			});
+			document.getElementById("intruder").addEventListener("click", function(){
+				e._count="jsaoidhdsadh";// when this e is an object intruder is goingto create the problem henve ve made a module of e and it returns only one value hence module is required
+				//document.getElementById("box").appendChild(e.create(typ));
+			})
+		};
+	</script>
+</head>
+<body>
+	<input type="text" id="typeb"/>
+	<button id="add">Adder</button>
+	<button id="intruder">Intruder</button>
+	<hr/><hr />
+	<div id="box">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array methods</title>
+    <script>
+    var arr=[7,8,9,5,4,22,1,0];
+    var more=[];
+    arr.forEach(function(value,index,array){
+        console.log(array+"["+index+"]= "+value);
+        more.push(array[index] = value+100);
+            });
+            console.log(more);
+
+            var maap= arr.map(function(value,index,x){
+           return value+10;
+            });
+            console.log(maap);
+
+            var maap1= arr.every(function(value,index,x){
+           return value>115;
+            });
+            console.log(maap1);
+            var maap11= arr.some(function(value,index,x){
+           return value>115;
+            });
+            console.log(maap11);
+
+            var total= arr.reduceRight(function(initval,value,index,x){
+           return initval+value;
+            },1000);
+            console.log(total);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

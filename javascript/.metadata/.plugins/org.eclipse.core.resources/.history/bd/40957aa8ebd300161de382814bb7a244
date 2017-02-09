@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q7</title>
+	<script>
+	 var o2= new Object({
+       title: "Hanuman",
+       "first Name": "maruti",
+       "p name": "Anjani -- Kesri",
+       power: 10
+   });
+   console.log("previous: "+o2);
+   var o1= new Object();
+for(p in o2){
+   
+    Object.defineProperty(o1,o2[p],{
+        value : p,
+        
+        enumerable :true
+           });
+};
+console.log("new: "+o1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

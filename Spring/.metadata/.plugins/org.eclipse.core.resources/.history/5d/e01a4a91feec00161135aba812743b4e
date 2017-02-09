@@ -1,0 +1,6 @@
+package com.psl.dao;
+
+public interface IEmployeeDAO {
+	
+
+}

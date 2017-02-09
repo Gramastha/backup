@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>My Custom Plugin</title>
+	<style>
+		[class ^= b]{
+			width: 100px;
+			height: 100px;
+			background-color: silver;
+			margin : 5px;
+			float: left;
+		}
+	</style>
+	<script src="lib/jquery-3.1.1.js"></script>
+	<script >
+		$(function(){
+			 $.fn.abhishek= function(cobj){
+			 	/*
+				 var d={
+									  col: cobj.col||"green",
+									 size: cobj.size||3,
+									 style: cobj.style||"solid"
+								  }*/
+				 var d={};
+				 $.fn.abhishek.defau={
+				 	col: cobj.col||"green",
+									 size: cobj.size||3,
+									 style: cobj.style||"solid"
+				 }
+				 $.extend(d,this.abhishek.defau,cobj);
+				return this.css("border", d.size+"px "+d.style+" "+d.col);// returns jquery object if we donot write return it returns dom object
+			};
+			
+			$(".b1").abhishek({
+			col: "orange",
+			size: 5,
+			style: "ridge"
+			}).html("A").click(hider);
+			
+										$(".b2").abhishek({
+										col: "red",
+										size: 7,
+										style: "double"
+										}).html("B").click(hider);
+			
+			$(".b3").abhishek({}).html("C").click(hider).next().abhishek({
+										col: "blue",
+										size: 2,
+										style: "dotted"
+										}).html("D").click(hider).next().abhishek({
+																			col: "black",
+																			size: 5,
+																			style: "dashed"
+																			}).html("E").click(hider);
+			
+			
+			/*
+			 $.fn.abhishek= function(c){
+				return this.css("border", "2px double "+c);// returns jquery object if we donot write return it returns dom object
+			};
+			
+			$(".b1").abhishek('blue').html("A").click(hider);
+			$(".b2").abhishek('green').html("b").click(hider);
+			$(".b3").abhishek('red').html("c").click(hider);
+			$(".b4").abhishek('black').html("D").click(hider);
+			$(".b5").abhishek('white').html("E").click(hider);
+			*/
+		});
+		function hider(evt){
+			$(evt.target).hide(1000);
+		}
+		
+	</script>
+</head>
+<body>
+	
+	  <div class="b1"> </div>
+	<div class="b2"> </div>
+	<div class="b3"> </div>
+	<div class="b4"> </div>
+	<div class="b5"> </div>
+	
+	
+</body>
+</html>

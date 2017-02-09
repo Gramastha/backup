@@ -1,0 +1,12 @@
+SUB-QUERIES
+<br/>
+1.	Find the Companies that placed orders in 1997<br/>
+2.	Create a report that shows all products by name that are in the Seafood category.<br/>
+3.	Create a report that shows all companies by name that sell products in CategoryID 8.<br/>
+4.	Create a report that shows all companies by name that sell products in the Seafood category.<br/>
+5.	Create a report that shows countries where customers live, but there is no supplier located in that country<br/>
+6.	Create a report that shows customers who have not placed any orders in the last 90 days<br/>
+7.	Provide list of customers who ordered more than 20 items of product number 23 on a single order.<br/>
+8.	Generate a report showing a list of companies that made purchases after the date 1/1/95.<br/>
+9.	Provide list of employees who received orders on '9/5/97'. (USE EXISTS)
+

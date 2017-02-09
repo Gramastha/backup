@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 30, 2017 2:53:00 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.psl.bean.Contact" table="tbl_contacts">
+        <id name="contactId" type="int">
+            <column name="CONTACTID" />
+            <generator class="identity" >
+           
+            </generator>
+        </id>
+     
+        
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastname" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="dateOfBirth" type="java.sql.Date">
+            <column name="DATEOFBIRTH" />
+        </property>
+        <component name="addrs">
+         <property name="city" column="CITY"></property>
+         <property name="country" column="COUNTRY"></property>
+        </component>
+        
+        <joined-subclass name="com.psl.bean.Employee" table="tbl_employees" >
+        		<key column="Emp_contact_id"></key>
+        		<property name="designation" column="desig"></property>
+        		<property name="empcode" column="empcode"></property>
+        </joined-subclass>
+        <joined-subclass name="com.psl.bean.Relative" table="tbl_relative">
+        <key column="REL_contact_id"></key>
+        <property name="relation"></property>
+        </joined-subclass>
+        <joined-subclass name="com.psl.bean.Friend" table="tbl_friend">
+        <key column="FRN_contact_id"></key>
+        <property name="petname"></property>
+        </joined-subclass>
+        
+    </class>
+    
+</hibernate-mapping>

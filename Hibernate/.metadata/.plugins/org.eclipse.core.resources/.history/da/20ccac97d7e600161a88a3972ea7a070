@@ -1,0 +1,18 @@
+package com.psl.main;
+
+import java.sql.Date;
+
+import com.psl.bean.Contact;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Contact contact= new  Contact("ABCD", "XYZW", "a@a.a", Date.valueOf("2010-10-10"));
+		
+
+	}
+
+}

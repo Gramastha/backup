@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+	button{
+		display: block;
+		margin: 5px auto;
+		width: 150px
+	}
+		.box{
+			background-color: #333333;
+			height: 400px;
+			width: 420px;
+			border: 1px solid #333333;
+			overflow: auto;
+			margin: auto;
+		}
+		.box div{
+			background-color: orange;
+			height: 50px;
+			width: 50px;
+			margin: 5px;
+			float: right;
+			text-align: center;
+			line-height: 50px;
+			vertical-align: middle;
+		}
+	</style>
+	<script>
+	function call(ele){
+	document.querySelector(".box").removeChild(ele);
+	}
+	function clickhandler(event)
+{
+//document.querySelector(".box").removeChild(event.target);
+	if(event.target.getAttribute("class") != "box"){
+	document.querySelector(".box").removeChild(event.target);
+	}
+	else{
+	alert("create to remove");
+	}
+
+
+
+};	
+		var count = 0;
+		document
+		.addEventListener("DOMContentLoaded",function(){
+			document.querySelectorAll("button")[0].addEventListener("click", addHandler)
+			document.querySelectorAll("button")[1].addEventListener("click", removeFirstHandler)
+			document.querySelectorAll("button")[2].addEventListener("click", removeLastHandler)
+			document.querySelector(".box").addEventListener("click", clickhandler);
+		});
+		function addHandler(){
+			var elm = document.createElement("div");
+				elm.textContent = count++;
+				//elm.setAttribute("onclick", "call(this)");
+			//	elm.addEventListener("click", clickhandler);
+			
+			document.querySelector(".box").appendChild(elm);
+		}
+		function removeFirstHandler(){
+			var elm = document.querySelector(".box").firstChild;
+			document.querySelector(".box").removeChild(elm);
+		}
+		function removeLastHandler(){
+			var elm = document.querySelector(".box").lastChild;
+			document.querySelector(".box").removeChild(elm);
+		}
+	</script>
+</head>
+<body>
+	<button>Add Box</button>
+	<button>Remove First Box</button>
+	<button>Remove Last Box</button>
+	<hr/>
+	<div class="box"></div>
+</body>
+</html>

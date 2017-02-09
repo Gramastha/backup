@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>SAIF</title>
+	<script>
+		// iife-- immediately invoke function expression
+		var mod=(function(){
+			var fname = "Shrinivasan";
+			var lname = "VIJAY";
+			return {
+				name: fname+" "+lname
+			}
+		})();
+		
+		console.log(mod.name);
+		
+		// self invoke associate function
+		var mod=(function(){
+			var fname = "Shrinivasan";
+			var lname = "VIJAY";
+			return {
+				name: lname+" "+fname
+			}
+		})();
+		
+		console.log(mod.name);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

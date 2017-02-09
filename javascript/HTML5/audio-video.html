@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Audio-Video</title>
+	<script>
+var vid = null;
+		document.addEventListener("DOMContentLoaded", function(){
+			vid = document.querySelector("video");
+			var playBtn = document.querySelectorAll("button")[0];
+			var pauseBtn = document.querySelectorAll("button")[1];
+			var stopBtn = document.querySelectorAll("button")[2];
+			var backBtn = document.querySelectorAll("button")[3];
+			var nextBtn = document.querySelectorAll("button")[4];
+			playBtn.addEventListener("click", playHandler);
+			pauseBtn.addEventListener("click", pauseHandler);
+			backBtn.addEventListener("click", backHandler);
+			nextBtn.addEventListener("click", nextHandler);
+			stopBtn.addEventListener("click", stopHandler);
+		});
+		
+		function playHandler(){
+			vid.play();
+		}
+		function pauseHandler(){
+			vid.pause();
+		}
+		function stopHandler(){
+			vid.currentTime = 0;
+			vid.pause();
+		}
+		
+		function backHandler(){
+			vid.currentTime -= 0.5 ;
+		}
+		function nextHandler(){
+			vid.currentTime +=0.5;
+		}
+		
+        </script>
+</head>
+<body>
+	<video controls poster="images/krishna.jpg" >
+		<source src="video/html5.mp4"></source>
+		<source src="video/html5.ogv"></source>
+		<source src="video/html5.swf"></source>
+		
+		<source src="video/html5.webm"></source>
+		<h1>Are you still using IE8</h1>
+		<track src="util/video.vtt" />
+		<track default src="util/video2.vtt" />
+	</video>
+	<hr/>
+	<button>Play</button>
+	<button>Pause</button>
+	<button>Stop</button>
+	<button>Step Back</button>
+	<button>Step Forward</button>
+</body>
+</html>

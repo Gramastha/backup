@@ -1,0 +1,11 @@
+package com.psl.bean;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class User {
+
+	private int userId;
+	private String fullname;
+	private Set<Account> accounts = new  HashSet<Account>();
+}

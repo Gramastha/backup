@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Administrator\Downloads\xyzz"/>
+			<item value="C:\Users\Administrator\Downloads\ReminderService"/>
+			<item value="C:\Users\Administrator\Downloads\BankAssignment-JUnit_010732_09_Dec_2016_04_22_20"/>
+			<item value="C:\Users\Administrator\Downloads\xyzz\ELTP Java-Shopping Mania_010732_08_Dec_2016_11_11_39"/>
+			<item value="C:\Users\Administrator\Downloads\Post-Eltp_010732_07_Dec_2016_03_05_33"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+	</section>
+</section>

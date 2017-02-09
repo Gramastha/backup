@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename source folder &apos;BankAssignment-JUnit/com.psl.test&apos; to &apos;test&apos;&#x0D;&#x0A;- Original project: &apos;BankAssignment-JUnit&apos;&#x0D;&#x0A;- Original element: &apos;BankAssignment-JUnit/com.psl.test&apos;&#x0D;&#x0A;- Renamed element: &apos;com.psl.test&apos;" description="Rename source folder &apos;com.psl.test&apos;" id="org.eclipse.jdt.ui.rename.source.folder" input="/com.psl.test" name="test" stamp="1481280818797" version="1.0"/>
+</session>

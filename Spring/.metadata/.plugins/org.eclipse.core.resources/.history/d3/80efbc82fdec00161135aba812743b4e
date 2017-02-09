@@ -1,0 +1,32 @@
+
+ackage com.psl.bean;
+
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext cntxt= new ClassPathXmlApplicationContext("configuration.xml");
+	//ApplicationContext cntxt= new FileSystemXmlApplicationContext("configuration.xml");
+	/*	
+	 * used for dynamic web projects
+	 * 
+	 * XmlWebApplicationContext cntxt= new XmlWebApplicationContext();
+		cntxt.setConfigLocation("configuration.xml");
+		cntxt.setServletContext(request.getServletContext());
+		cntxt.refresh();*/
+		
+		Employee emp= (Employee) cntxt.getBean("employee");
+		Address2 add2= (Address2) cntxt.getBean("addr1");
+		
+		cntxt.registerShutdownHook();
+		
+		System.out.println(emp);
+		Employee emp1= new Employee();
+	}
+
+}

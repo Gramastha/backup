@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+		<style>
+		.outerbox{
+			width: 500px;
+			height: 200px;
+			background-color: #333333;
+			margin: auto;
+			border: 1px solid transparent;
+		}
+		.innerbox{
+			width: 250px;
+			height: 100px;
+			background-color: #666666;
+			margin: 50px auto;
+			border: 1px solid transparent;
+		}
+		.innerbox button{
+			width: 100px;
+			height: 50px;
+			background-color: orange;
+			
+			margin: 25px auto;
+			display: block;
+		}
+	</style>
+	<script>
+		window.onload= function(){
+			
+			document.getElementById("outerbox").addEventListener("click", outerClickHandler,true);
+			document.getElementById("outerbox").addEventListener("click", outerClickHandler,false);
+			document.getElementById("innerbox").addEventListener("click", clickHandler,true);
+			document.getElementById("innerbox").addEventListener("click", clickHandler,false);
+			document.getElementById("clickbtn").addEventListener("click", clickHandler);// default false
+			
+		};
+		function clickHandler(eve){
+			console.log(eve.currentTarget.id);
+			//alert(eve.target.innerHTML);
+		}
+		function outerClickHandler(eve){
+			if(document.getElementById("cb").checked){
+				eve.stopPropagation();
+				console.log("event was stopped by "+eve.currentTarget.id);
+			}
+			else{
+							console.log(eve.currentTarget.id);			
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="lab"><label> I don't agree<input id="cb" type="checkbox" /></label></div>
+	<hr />
+	<div id="outerbox" class="outerbox">
+		<div id="innerbox" class="innerbox">
+			<button id="clickbtn">Click Button</button>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+package com.psl.bean;
+
+import java.sql.Date;
+
+public class Employee extends Contact {
+ private String empcode,designation;
+ 
+ public Employee() {
+	// TODO Auto-generated constructor stub
+}
+
+public Employee(String firstname, String lastname, String email,
+		Date dateOfBirth, Address addrs, String empcode, String designation) {
+	super(firstname, lastname, email, dateOfBirth, addrs);
+	this.empcode = empcode;
+	this.designation = designation;
+}
+
+public String getEmpcode() {
+	return empcode;
+}
+
+public void setEmpcode(String empcode) {
+	this.empcode = empcode;
+}
+
+public String getDesignation() {
+	return designation;
+}
+
+public void setDesignation(String designation) {
+	this.designation = designation;
+}
+ 
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Question 5</title>
+	<script type="text/javascript">
+	var a1 = prompt("Enter array in '[' and ']");
+	   console.log(a1);
+var dup=[];
+	a1.forEach(function(value,index,array){
+		var f= true;
+        for(p in dup){
+        	if(p==value){
+        		console.log(value);
+        		f=false;
+        	}
+        }
+        if(f){
+        	dup.push(value);
+        }
+        
+            });
+           
+          //  console.log(dup);
+       
+</script>
+</head>
+<body>
+	<div class="show">
+		
+	</div>
+</body>
+</html>

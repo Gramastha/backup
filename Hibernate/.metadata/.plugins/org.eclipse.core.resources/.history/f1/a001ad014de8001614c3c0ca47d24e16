@@ -1,0 +1,70 @@
+package com.psl.main;
+
+import java.sql.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.psl.bean.Address;
+import com.psl.bean.Contact;
+import com.psl.bean.User;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		User u1= new User("User1");
+		User u2= new User("User2");
+		User u3= new User("User3");
+		User u4= new User("User4");
+		User u5= new User("User5");
+		
+		
+		Contact c1= new  Contact("ABCD", "XYZW", "a@a.a", Date.valueOf("2010-10-10"), new Address("MUMBAI", "INDIA"));
+		Contact c2= new  Contact("EFGH", "PQRS", "e@f.g", Date.valueOf("2001-10-1"),new Address("NAgpur", "INDIA"));
+		Contact c3= new  Contact("AbCD@", "PQRS3", "e3@f.g", Date.valueOf("2001-3-3"),new Address("NAgpur3", "INDIA3"));
+		Contact c4= new  Contact("asdsad", "PQRS4", "e@f4.g", Date.valueOf("2001-4-4"),new Address("NAgpur4", "INDIA4"));
+		Contact c5= new  Contact("EdsdFGH", "PQRS5", "e@f.g5", Date.valueOf("2001-5-5"),new Address("NAgpur5", "INDIA5"));
+		Contact c6= new  Contact("qerEFGH", "PQRS6", "e6@f.g", Date.valueOf("2001-6-6"),new Address("NAgpur6", "INDIA6"));
+		Contact c7= new  Contact("grtghEFGH", "PQRS7", "e7@f.g", Date.valueOf("2001-7-7"),new Address("NAgpur7", "INDIA7"));
+		Contact c8= new  Contact("hthszhEFGH", "PQRS8", "e8@f.g", Date.valueOf("2001-8-8"),new Address("NAgpur8", "INDIA8"));
+		Contact c9= new  Contact("thyEFGH", "PQRS9", "e9@f.g", Date.valueOf("2001-9-9"),new Address("NAgpur9", "INDIA9"));
+		Contact c10= new  Contact("trhtEFGH", "PQRS10", "e10@f.g", Date.valueOf("2001-10-10"),new Address("NAgpur10", "INDIA10"));
+		
+		
+		u1.getContacts().add(c1);
+		u1.getContacts().add(c2);
+		u2.getContacts().add(c3);
+		u2.getContacts().add(c4);
+		u1.getContacts().add(c5);
+		u3.getContacts().add(c6);
+		u4.getContacts().add(c7);
+		u4.getContacts().add(c8);
+		u5.getContacts().add(c9);
+		u5.getContacts().add(c10);
+		
+		
+		
+		Configuration config= new Configuration().configure();
+		SessionFactory sessionFactory= config.buildSessionFactory();
+		Session session= sessionFactory.openSession();
+		Transaction trans= session.beginTransaction();
+		session.saveOrUpdate(u1);
+		session.saveOrUpdate(u2);
+		session.saveOrUpdate(u3);
+		session.saveOrUpdate(u4);
+		session.saveOrUpdate(u5);
+		trans.commit();
+		
+		
+		session.close();
+		sessionFactory.close();
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.psl.bean;
+
+public class Friend extends Contact {
+private String petname;
+public Friend() {
+	
+}
+public String getPetname() {
+	return petname;
+}
+public void setPetname(String petname) {
+	this.petname = petname;
+}
+
+}

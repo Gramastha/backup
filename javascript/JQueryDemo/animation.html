@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>animation</title>
+	<style type="text/css" media="screen">
+		.box{
+			width : 200px;
+			height : 80px;
+			background-color: yellow;
+			margin: 10px;
+			border: 1px solid transparent;
+		}
+	</style>
+	<script src="lib/jquery-3.1.1.js">
+		
+	</script>
+	<script>	
+	$(function(){
+		$(".box").animate({
+			width: "300px"
+		}).delay(2000)
+		.animate({
+			height: "500px"
+		}).delay(3000).animate({
+			width:"500px"
+		}).delay(2000).animate({
+			height: "200px"
+		}).promise().done(function (){
+			alert("completed")
+		});
+		
+		
+		$("#b").click(function(){
+		$(":animated").stop(true);
+	})
+	});
+	
+	</script>
+</head>
+
+<body>
+	<button id="b">stop</button>
+	<div class="box" >
+		
+	</div>
+</body>
+</html>

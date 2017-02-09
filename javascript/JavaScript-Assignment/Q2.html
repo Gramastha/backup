@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Q2</title>
+	<script >
+		function longest(){
+			var s= document.querySelector("#s").value;
+			var word= s.split(" ");
+			var max= 0;
+			var string=" ";
+			for(var w=0;w<word.length;w++){
+				if(word[w].length>max){
+					max=word[w].length;
+					string=word[w];
+				}
+			}
+			alert("longest word: "+string);
+		}
+	</script>
+</head>
+<body>
+	Enter your line:
+	<input type="text" id="s" onchange="longest()"/>
+</body>
+</html>
